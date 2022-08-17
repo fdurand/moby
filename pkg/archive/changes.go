@@ -1,4 +1,4 @@
-package archive // import "github.com/docker/docker/pkg/archive"
+package archive // import "github.com/fdurand/moby/pkg/archive"
 
 import (
 	"archive/tar"
@@ -12,9 +12,9 @@ import (
 	"syscall"
 	"time"
 
-	"github.com/docker/docker/pkg/idtools"
-	"github.com/docker/docker/pkg/pools"
-	"github.com/docker/docker/pkg/system"
+	"github.com/fdurand/moby/pkg/idtools"
+	"github.com/fdurand/moby/pkg/pools"
+	"github.com/fdurand/moby/pkg/system"
 	"github.com/sirupsen/logrus"
 )
 
@@ -65,7 +65,7 @@ func (c changesByPath) Swap(i, j int)      { c[j], c[i] = c[i], c[j] }
 // Gnu tar doesn't have sub-second mtime precision. The go tar
 // writer (1.10+) does when using PAX format, but we round times to seconds
 // to ensure archives have the same hashes for backwards compatibility.
-// See https://github.com/moby/moby/pull/35739/commits/fb170206ba12752214630b269a40ac7be6115ed4.
+// See https://github.com/fdurand/moby/pull/35739/commits/fb170206ba12752214630b269a40ac7be6115ed4.
 //
 // Non-sub-second is problematic when we apply changes via tar
 // files. We handle this by comparing for exact times, *or* same
@@ -184,7 +184,7 @@ func changes(layers []string, rw string, dc deleteChange, sc skipChange) ([]Chan
 		// If /foo/bar/file.txt is modified, then /foo/bar must be part of the changed files.
 		// This block is here to ensure the change is recorded even if the
 		// modify time, mode and size of the parent directory in the rw and ro layers are all equal.
-		// Check https://github.com/docker/docker/pull/13590 for details.
+		// Check https://github.com/fdurand/moby/pull/13590 for details.
 		if f.IsDir() {
 			changedDirs[path] = struct{}{}
 		}

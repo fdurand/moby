@@ -8,9 +8,9 @@ import (
 	"net"
 	"syscall"
 
-	"github.com/docker/docker/libnetwork/driverapi"
-	"github.com/docker/docker/libnetwork/ns"
-	"github.com/docker/docker/libnetwork/types"
+	"github.com/fdurand/moby/libnetwork/driverapi"
+	"github.com/fdurand/moby/libnetwork/ns"
+	"github.com/fdurand/moby/libnetwork/types"
 	"github.com/gogo/protobuf/proto"
 	"github.com/sirupsen/logrus"
 )

@@ -1,4 +1,4 @@
-package dockerfile // import "github.com/docker/docker/builder/dockerfile"
+package dockerfile // import "github.com/fdurand/moby/builder/dockerfile"
 
 // internals for handling commands. Covers many areas and a lot of
 // non-contiguous functionality. Please read the comments.
@@ -10,16 +10,16 @@ import (
 	"io"
 	"strings"
 
-	"github.com/docker/docker/api/types"
-	"github.com/docker/docker/api/types/backend"
-	"github.com/docker/docker/api/types/container"
-	"github.com/docker/docker/builder"
-	"github.com/docker/docker/image"
-	"github.com/docker/docker/pkg/archive"
-	"github.com/docker/docker/pkg/chrootarchive"
-	"github.com/docker/docker/pkg/containerfs"
-	"github.com/docker/docker/pkg/idtools"
-	"github.com/docker/docker/pkg/stringid"
+	"github.com/fdurand/moby/api/types"
+	"github.com/fdurand/moby/api/types/backend"
+	"github.com/fdurand/moby/api/types/container"
+	"github.com/fdurand/moby/builder"
+	"github.com/fdurand/moby/image"
+	"github.com/fdurand/moby/pkg/archive"
+	"github.com/fdurand/moby/pkg/chrootarchive"
+	"github.com/fdurand/moby/pkg/containerfs"
+	"github.com/fdurand/moby/pkg/idtools"
+	"github.com/fdurand/moby/pkg/stringid"
 	"github.com/docker/go-connections/nat"
 	specs "github.com/opencontainers/image-spec/specs-go/v1"
 	"github.com/pkg/errors"

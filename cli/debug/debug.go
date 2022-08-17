@@ -1,4 +1,4 @@
-package debug // import "github.com/docker/docker/cli/debug"
+package debug // import "github.com/fdurand/moby/cli/debug"
 
 import (
 	"os"

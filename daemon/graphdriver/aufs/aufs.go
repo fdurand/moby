@@ -21,7 +21,7 @@ aufs driver directory structure
 
 */
 
-package aufs // import "github.com/docker/docker/daemon/graphdriver/aufs"
+package aufs // import "github.com/fdurand/moby/daemon/graphdriver/aufs"
 
 import (
 	"bufio"
@@ -36,12 +36,12 @@ import (
 	"sync"
 
 	"github.com/containerd/containerd/pkg/userns"
-	"github.com/docker/docker/daemon/graphdriver"
-	"github.com/docker/docker/pkg/archive"
-	"github.com/docker/docker/pkg/chrootarchive"
-	"github.com/docker/docker/pkg/containerfs"
-	"github.com/docker/docker/pkg/directory"
-	"github.com/docker/docker/pkg/idtools"
+	"github.com/fdurand/moby/daemon/graphdriver"
+	"github.com/fdurand/moby/pkg/archive"
+	"github.com/fdurand/moby/pkg/chrootarchive"
+	"github.com/fdurand/moby/pkg/containerfs"
+	"github.com/fdurand/moby/pkg/directory"
+	"github.com/fdurand/moby/pkg/idtools"
 	"github.com/moby/locker"
 	"github.com/moby/sys/mount"
 	"github.com/opencontainers/selinux/go-selinux/label"

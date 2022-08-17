@@ -1,4 +1,4 @@
-package swarm // import "github.com/docker/docker/api/server/router/swarm"
+package swarm // import "github.com/fdurand/moby/api/server/router/swarm"
 
 import (
 	"context"
@@ -6,14 +6,14 @@ import (
 	"net/http"
 	"strconv"
 
-	"github.com/docker/docker/api/server/httputils"
-	basictypes "github.com/docker/docker/api/types"
-	"github.com/docker/docker/api/types/backend"
-	"github.com/docker/docker/api/types/filters"
-	"github.com/docker/docker/api/types/registry"
-	types "github.com/docker/docker/api/types/swarm"
-	"github.com/docker/docker/api/types/versions"
-	"github.com/docker/docker/errdefs"
+	"github.com/fdurand/moby/api/server/httputils"
+	basictypes "github.com/fdurand/moby/api/types"
+	"github.com/fdurand/moby/api/types/backend"
+	"github.com/fdurand/moby/api/types/filters"
+	"github.com/fdurand/moby/api/types/registry"
+	types "github.com/fdurand/moby/api/types/swarm"
+	"github.com/fdurand/moby/api/types/versions"
+	"github.com/fdurand/moby/errdefs"
 	"github.com/pkg/errors"
 	"github.com/sirupsen/logrus"
 )

@@ -1,11 +1,11 @@
-package convert // import "github.com/docker/docker/daemon/cluster/convert"
+package convert // import "github.com/fdurand/moby/daemon/cluster/convert"
 
 import (
 	"testing"
 
-	containertypes "github.com/docker/docker/api/types/container"
-	swarmtypes "github.com/docker/docker/api/types/swarm"
-	"github.com/docker/docker/api/types/swarm/runtime"
+	containertypes "github.com/fdurand/moby/api/types/container"
+	swarmtypes "github.com/fdurand/moby/api/types/swarm"
+	"github.com/fdurand/moby/api/types/swarm/runtime"
 	google_protobuf3 "github.com/gogo/protobuf/types"
 	swarmapi "github.com/moby/swarmkit/v2/api"
 	"gotest.tools/v3/assert"

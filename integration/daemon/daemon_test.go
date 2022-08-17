@@ -1,4 +1,4 @@
-package daemon // import "github.com/docker/docker/integration/daemon"
+package daemon // import "github.com/fdurand/moby/integration/daemon"
 
 import (
 	"context"
@@ -13,9 +13,9 @@ import (
 	"syscall"
 	"testing"
 
-	"github.com/docker/docker/api/types"
-	"github.com/docker/docker/daemon/config"
-	"github.com/docker/docker/testutil/daemon"
+	"github.com/fdurand/moby/api/types"
+	"github.com/fdurand/moby/daemon/config"
+	"github.com/fdurand/moby/testutil/daemon"
 	"gotest.tools/v3/assert"
 	is "gotest.tools/v3/assert/cmp"
 	"gotest.tools/v3/skip"
@@ -369,7 +369,7 @@ func TestDaemonProxy(t *testing.T) {
 		//        causing the test to fail here. As a workaround, check if we
 		//        received the "reloaded" message after signaling, and only then
 		//        check that it's sanitized properly. For more details on this
-		//        issue, see https://github.com/moby/moby/pull/42835/files#r713120315
+		//        issue, see https://github.com/fdurand/moby/pull/42835/files#r713120315
 		if !strings.Contains(string(logs), "Reloaded configuration:") {
 			t.Skip("Skipping test, because we did not find 'Reloaded configuration' in the logs")
 		}

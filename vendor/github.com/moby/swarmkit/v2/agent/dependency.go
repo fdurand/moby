@@ -1,7 +1,7 @@
 package agent
 
 import (
-	"github.com/docker/docker/pkg/plugingetter"
+	"github.com/fdurand/moby/pkg/plugingetter"
 
 	"github.com/moby/swarmkit/v2/agent/configs"
 	"github.com/moby/swarmkit/v2/agent/csi"

@@ -1,7 +1,7 @@
 //go:build linux
 // +build linux
 
-package overlayutils // import "github.com/docker/docker/daemon/graphdriver/overlayutils"
+package overlayutils // import "github.com/fdurand/moby/daemon/graphdriver/overlayutils"
 
 import (
 	"crypto/rand"

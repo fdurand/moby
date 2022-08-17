@@ -1,4 +1,4 @@
-package plugin // import "github.com/docker/docker/api/server/router/plugin"
+package plugin // import "github.com/fdurand/moby/api/server/router/plugin"
 
 import (
 	"context"
@@ -6,10 +6,10 @@ import (
 	"net/http"
 
 	"github.com/docker/distribution/reference"
-	"github.com/docker/docker/api/types"
-	"github.com/docker/docker/api/types/filters"
-	"github.com/docker/docker/api/types/registry"
-	"github.com/docker/docker/plugin"
+	"github.com/fdurand/moby/api/types"
+	"github.com/fdurand/moby/api/types/filters"
+	"github.com/fdurand/moby/api/types/registry"
+	"github.com/fdurand/moby/plugin"
 )
 
 // Backend for Plugin

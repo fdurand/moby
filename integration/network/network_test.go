@@ -1,4 +1,4 @@
-package network // import "github.com/docker/docker/integration/network"
+package network // import "github.com/fdurand/moby/integration/network"
 
 import (
 	"bytes"
@@ -9,11 +9,11 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/docker/docker/api/types"
-	"github.com/docker/docker/integration/internal/container"
-	"github.com/docker/docker/integration/internal/network"
-	"github.com/docker/docker/testutil/daemon"
-	"github.com/docker/docker/testutil/request"
+	"github.com/fdurand/moby/api/types"
+	"github.com/fdurand/moby/integration/internal/container"
+	"github.com/fdurand/moby/integration/internal/network"
+	"github.com/fdurand/moby/testutil/daemon"
+	"github.com/fdurand/moby/testutil/request"
 	"gotest.tools/v3/assert"
 	is "gotest.tools/v3/assert/cmp"
 	"gotest.tools/v3/icmd"
@@ -122,7 +122,7 @@ func TestNetworkInvalidJSON(t *testing.T) {
 }
 
 // TestNetworkList verifies that /networks returns a list of networks either
-// with, or without a trailing slash (/networks/). Regression test for https://github.com/moby/moby/issues/24595
+// with, or without a trailing slash (/networks/). Regression test for https://github.com/fdurand/moby/issues/24595
 func TestNetworkList(t *testing.T) {
 	defer setupTest(t)()
 

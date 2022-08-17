@@ -8,11 +8,11 @@ import (
 	"fmt"
 	"net"
 
-	"github.com/docker/docker/libnetwork/datastore"
-	"github.com/docker/docker/libnetwork/driverapi"
-	"github.com/docker/docker/libnetwork/netutils"
-	"github.com/docker/docker/libnetwork/ns"
-	"github.com/docker/docker/libnetwork/types"
+	"github.com/fdurand/moby/libnetwork/datastore"
+	"github.com/fdurand/moby/libnetwork/driverapi"
+	"github.com/fdurand/moby/libnetwork/netutils"
+	"github.com/fdurand/moby/libnetwork/ns"
+	"github.com/fdurand/moby/libnetwork/types"
 	"github.com/sirupsen/logrus"
 )
 

@@ -1,12 +1,12 @@
-package logger // import "github.com/docker/docker/daemon/logger"
+package logger // import "github.com/fdurand/moby/daemon/logger"
 
 import (
 	"fmt"
 	"sort"
 	"sync"
 
-	containertypes "github.com/docker/docker/api/types/container"
-	"github.com/docker/docker/pkg/plugingetter"
+	containertypes "github.com/fdurand/moby/api/types/container"
+	"github.com/fdurand/moby/pkg/plugingetter"
 	units "github.com/docker/go-units"
 	"github.com/pkg/errors"
 )

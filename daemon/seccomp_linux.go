@@ -1,4 +1,4 @@
-package daemon // import "github.com/docker/docker/daemon"
+package daemon // import "github.com/fdurand/moby/daemon"
 
 import (
 	"context"
@@ -6,9 +6,9 @@ import (
 
 	"github.com/containerd/containerd/containers"
 	coci "github.com/containerd/containerd/oci"
-	"github.com/docker/docker/container"
-	dconfig "github.com/docker/docker/daemon/config"
-	"github.com/docker/docker/profiles/seccomp"
+	"github.com/fdurand/moby/container"
+	dconfig "github.com/fdurand/moby/daemon/config"
+	"github.com/fdurand/moby/profiles/seccomp"
 	"github.com/sirupsen/logrus"
 )
 

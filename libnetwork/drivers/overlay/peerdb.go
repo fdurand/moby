@@ -10,9 +10,9 @@ import (
 	"sync"
 	"syscall"
 
-	"github.com/docker/docker/libnetwork/internal/caller"
-	"github.com/docker/docker/libnetwork/internal/setmatrix"
-	"github.com/docker/docker/libnetwork/osl"
+	"github.com/fdurand/moby/libnetwork/internal/caller"
+	"github.com/fdurand/moby/libnetwork/internal/setmatrix"
+	"github.com/fdurand/moby/libnetwork/osl"
 	"github.com/sirupsen/logrus"
 )
 

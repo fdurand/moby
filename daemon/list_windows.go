@@ -1,9 +1,9 @@
-package daemon // import "github.com/docker/docker/daemon"
+package daemon // import "github.com/fdurand/moby/daemon"
 
 import (
 	"strings"
 
-	"github.com/docker/docker/container"
+	"github.com/fdurand/moby/container"
 )
 
 // excludeByIsolation is a platform specific helper function to support PS

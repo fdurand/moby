@@ -1,4 +1,4 @@
-package graphdriver // import "github.com/docker/docker/daemon/graphdriver"
+package graphdriver // import "github.com/fdurand/moby/daemon/graphdriver"
 
 import (
 	"io"
@@ -6,10 +6,10 @@ import (
 	"path/filepath"
 	"strings"
 
-	"github.com/docker/docker/pkg/archive"
-	"github.com/docker/docker/pkg/containerfs"
-	"github.com/docker/docker/pkg/idtools"
-	"github.com/docker/docker/pkg/plugingetter"
+	"github.com/fdurand/moby/pkg/archive"
+	"github.com/fdurand/moby/pkg/containerfs"
+	"github.com/fdurand/moby/pkg/idtools"
+	"github.com/fdurand/moby/pkg/plugingetter"
 	"github.com/pkg/errors"
 	"github.com/sirupsen/logrus"
 	"github.com/vbatts/tar-split/tar/storage"

@@ -1,4 +1,4 @@
-package session // import "github.com/docker/docker/api/server/router/session"
+package session // import "github.com/fdurand/moby/api/server/router/session"
 
 import (
 	"context"

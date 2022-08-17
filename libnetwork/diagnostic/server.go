@@ -8,8 +8,8 @@ import (
 	"sync"
 	"sync/atomic"
 
-	"github.com/docker/docker/libnetwork/internal/caller"
-	"github.com/docker/docker/pkg/stack"
+	"github.com/fdurand/moby/libnetwork/internal/caller"
+	"github.com/fdurand/moby/pkg/stack"
 	"github.com/sirupsen/logrus"
 )
 

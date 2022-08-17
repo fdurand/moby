@@ -1,4 +1,4 @@
-package service // import "github.com/docker/docker/volume/service"
+package service // import "github.com/fdurand/moby/volume/service"
 
 import "strings"
 

@@ -1,4 +1,4 @@
-package container // import "github.com/docker/docker/integration/container"
+package container // import "github.com/fdurand/moby/integration/container"
 
 import (
 	"bytes"
@@ -10,8 +10,8 @@ import (
 	"testing"
 	"time"
 
-	"github.com/docker/docker/api/types"
-	"github.com/docker/docker/integration/internal/container"
+	"github.com/fdurand/moby/api/types"
+	"github.com/fdurand/moby/integration/internal/container"
 	"github.com/docker/go-connections/nat"
 	"gotest.tools/v3/assert"
 	is "gotest.tools/v3/assert/cmp"
@@ -128,7 +128,7 @@ func getExternalAddress(t *testing.T) net.IP {
 
 	if len(ifaceAddrs) > 1 {
 		// Prefer IPv4 address if multiple addresses found, as rootlesskit
-		// does not handle IPv6 currently https://github.com/moby/moby/pull/41908#issuecomment-774200001
+		// does not handle IPv6 currently https://github.com/fdurand/moby/pull/41908#issuecomment-774200001
 		for _, a := range ifaceAddrs {
 			ifaceIP, _, err := net.ParseCIDR(a.String())
 			assert.NilError(t, err)

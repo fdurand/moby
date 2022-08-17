@@ -1,4 +1,4 @@
-package container // import "github.com/docker/docker/integration/container"
+package container // import "github.com/fdurand/moby/integration/container"
 
 import (
 	"context"
@@ -7,14 +7,14 @@ import (
 	"testing"
 	"time"
 
-	"github.com/docker/docker/api/types"
-	containertypes "github.com/docker/docker/api/types/container"
-	mounttypes "github.com/docker/docker/api/types/mount"
-	"github.com/docker/docker/api/types/network"
-	"github.com/docker/docker/api/types/versions"
-	"github.com/docker/docker/client"
-	"github.com/docker/docker/integration/internal/container"
-	"github.com/docker/docker/pkg/system"
+	"github.com/fdurand/moby/api/types"
+	containertypes "github.com/fdurand/moby/api/types/container"
+	mounttypes "github.com/fdurand/moby/api/types/mount"
+	"github.com/fdurand/moby/api/types/network"
+	"github.com/fdurand/moby/api/types/versions"
+	"github.com/fdurand/moby/client"
+	"github.com/fdurand/moby/integration/internal/container"
+	"github.com/fdurand/moby/pkg/system"
 	"github.com/moby/sys/mount"
 	"github.com/moby/sys/mountinfo"
 	"gotest.tools/v3/assert"

@@ -1,12 +1,12 @@
-package images // import "github.com/docker/docker/daemon/images"
+package images // import "github.com/fdurand/moby/daemon/images"
 
 import (
 	"context"
 	"strconv"
 
-	"github.com/docker/docker/api/types/filters"
-	"github.com/docker/docker/api/types/registry"
-	"github.com/docker/docker/dockerversion"
+	"github.com/fdurand/moby/api/types/filters"
+	"github.com/fdurand/moby/api/types/registry"
+	"github.com/fdurand/moby/dockerversion"
 )
 
 var acceptedSearchFilterTags = map[string]bool{

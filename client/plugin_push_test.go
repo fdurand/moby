@@ -1,4 +1,4 @@
-package client // import "github.com/docker/docker/client"
+package client // import "github.com/fdurand/moby/client"
 
 import (
 	"bytes"
@@ -9,8 +9,8 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/docker/docker/api/types/registry"
-	"github.com/docker/docker/errdefs"
+	"github.com/fdurand/moby/api/types/registry"
+	"github.com/fdurand/moby/errdefs"
 )
 
 func TestPluginPushError(t *testing.T) {

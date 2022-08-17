@@ -6,7 +6,7 @@ package bridge
 import (
 	"testing"
 
-	"github.com/docker/docker/libnetwork/types"
+	"github.com/fdurand/moby/libnetwork/types"
 )
 
 func getPorts() []types.TransportPort {

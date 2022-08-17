@@ -14,14 +14,14 @@ import (
 	"sync"
 	"testing"
 
-	"github.com/docker/docker/libnetwork"
-	"github.com/docker/docker/libnetwork/ipamapi"
-	"github.com/docker/docker/libnetwork/netlabel"
-	"github.com/docker/docker/libnetwork/options"
-	"github.com/docker/docker/libnetwork/osl"
-	"github.com/docker/docker/libnetwork/testutils"
-	"github.com/docker/docker/libnetwork/types"
-	"github.com/docker/docker/pkg/reexec"
+	"github.com/fdurand/moby/libnetwork"
+	"github.com/fdurand/moby/libnetwork/ipamapi"
+	"github.com/fdurand/moby/libnetwork/netlabel"
+	"github.com/fdurand/moby/libnetwork/options"
+	"github.com/fdurand/moby/libnetwork/osl"
+	"github.com/fdurand/moby/libnetwork/testutils"
+	"github.com/fdurand/moby/libnetwork/types"
+	"github.com/fdurand/moby/pkg/reexec"
 	"github.com/sirupsen/logrus"
 	"github.com/vishvananda/netlink"
 	"github.com/vishvananda/netns"
@@ -1152,7 +1152,7 @@ func isV6Listenable() bool {
 		if err != nil {
 			// When the kernel was booted with `ipv6.disable=1`,
 			// we get err "listen tcp6 [::1]:0: socket: address family not supported by protocol"
-			// https://github.com/moby/moby/issues/42288
+			// https://github.com/fdurand/moby/issues/42288
 			logrus.Debugf("port_mapping: v6Listenable=false (%v)", err)
 		} else {
 			v6ListenableCached = true

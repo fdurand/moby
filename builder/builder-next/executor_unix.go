@@ -9,10 +9,10 @@ import (
 	"strconv"
 	"sync"
 
-	"github.com/docker/docker/daemon/config"
-	"github.com/docker/docker/libnetwork"
-	"github.com/docker/docker/pkg/idtools"
-	"github.com/docker/docker/pkg/stringid"
+	"github.com/fdurand/moby/daemon/config"
+	"github.com/fdurand/moby/libnetwork"
+	"github.com/fdurand/moby/pkg/idtools"
+	"github.com/fdurand/moby/pkg/stringid"
 	"github.com/moby/buildkit/executor"
 	"github.com/moby/buildkit/executor/oci"
 	"github.com/moby/buildkit/executor/runcexecutor"
@@ -45,7 +45,7 @@ func newExecutor(root, cgroupParent string, net libnetwork.NetworkController, dn
 	}
 
 	// Returning a non-nil but empty *IdentityMapping breaks BuildKit:
-	// https://github.com/moby/moby/pull/39444
+	// https://github.com/fdurand/moby/pull/39444
 	pidmap := &idmap
 	if idmap.Empty() {
 		pidmap = nil

@@ -1,10 +1,10 @@
-package tarexport // import "github.com/docker/docker/image/tarexport"
+package tarexport // import "github.com/fdurand/moby/image/tarexport"
 
 import (
 	"github.com/docker/distribution"
-	"github.com/docker/docker/image"
-	"github.com/docker/docker/layer"
-	refstore "github.com/docker/docker/reference"
+	"github.com/fdurand/moby/image"
+	"github.com/fdurand/moby/layer"
+	refstore "github.com/fdurand/moby/reference"
 )
 
 const (

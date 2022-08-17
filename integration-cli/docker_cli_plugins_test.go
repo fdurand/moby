@@ -12,10 +12,10 @@ import (
 	"testing"
 	"time"
 
-	"github.com/docker/docker/api/types"
-	"github.com/docker/docker/integration-cli/cli"
-	"github.com/docker/docker/integration-cli/daemon"
-	"github.com/docker/docker/testutil/fixtures/plugin"
+	"github.com/fdurand/moby/api/types"
+	"github.com/fdurand/moby/integration-cli/cli"
+	"github.com/fdurand/moby/integration-cli/daemon"
+	"github.com/fdurand/moby/testutil/fixtures/plugin"
 	"gotest.tools/v3/assert"
 )
 
@@ -327,7 +327,7 @@ func (ps *DockerPluginSuite) TestPluginInspect(c *testing.T) {
 	assert.ErrorContains(c, err, "")
 }
 
-// Test case for https://github.com/docker/docker/pull/29186#discussion_r91277345
+// Test case for https://github.com/fdurand/moby/pull/29186#discussion_r91277345
 func (s *DockerCLIPluginsSuite) TestPluginInspectOnWindows(c *testing.T) {
 	// This test should work on Windows only
 	testRequires(c, DaemonIsWindows)

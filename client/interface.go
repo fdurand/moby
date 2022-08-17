@@ -1,4 +1,4 @@
-package client // import "github.com/docker/docker/client"
+package client // import "github.com/fdurand/moby/client"
 
 import (
 	"context"
@@ -6,15 +6,15 @@ import (
 	"net"
 	"net/http"
 
-	"github.com/docker/docker/api/types"
-	"github.com/docker/docker/api/types/container"
-	"github.com/docker/docker/api/types/events"
-	"github.com/docker/docker/api/types/filters"
-	"github.com/docker/docker/api/types/image"
-	"github.com/docker/docker/api/types/network"
-	"github.com/docker/docker/api/types/registry"
-	"github.com/docker/docker/api/types/swarm"
-	"github.com/docker/docker/api/types/volume"
+	"github.com/fdurand/moby/api/types"
+	"github.com/fdurand/moby/api/types/container"
+	"github.com/fdurand/moby/api/types/events"
+	"github.com/fdurand/moby/api/types/filters"
+	"github.com/fdurand/moby/api/types/image"
+	"github.com/fdurand/moby/api/types/network"
+	"github.com/fdurand/moby/api/types/registry"
+	"github.com/fdurand/moby/api/types/swarm"
+	"github.com/fdurand/moby/api/types/volume"
 	specs "github.com/opencontainers/image-spec/specs-go/v1"
 )
 

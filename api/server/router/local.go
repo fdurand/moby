@@ -1,9 +1,9 @@
-package router // import "github.com/docker/docker/api/server/router"
+package router // import "github.com/fdurand/moby/api/server/router"
 
 import (
 	"net/http"
 
-	"github.com/docker/docker/api/server/httputils"
+	"github.com/fdurand/moby/api/server/httputils"
 )
 
 // RouteWrapper wraps a route with extra functionality.

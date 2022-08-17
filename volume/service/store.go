@@ -1,4 +1,4 @@
-package service // import "github.com/docker/docker/volume/service"
+package service // import "github.com/fdurand/moby/volume/service"
 
 import (
 	"context"
@@ -9,11 +9,11 @@ import (
 	"sync"
 	"time"
 
-	"github.com/docker/docker/errdefs"
-	"github.com/docker/docker/volume"
-	"github.com/docker/docker/volume/drivers"
-	volumemounts "github.com/docker/docker/volume/mounts"
-	"github.com/docker/docker/volume/service/opts"
+	"github.com/fdurand/moby/errdefs"
+	"github.com/fdurand/moby/volume"
+	"github.com/fdurand/moby/volume/drivers"
+	volumemounts "github.com/fdurand/moby/volume/mounts"
+	"github.com/fdurand/moby/volume/service/opts"
 	"github.com/moby/locker"
 	"github.com/pkg/errors"
 	"github.com/sirupsen/logrus"

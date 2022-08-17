@@ -1,8 +1,8 @@
 package containerd
 
 import (
-	"github.com/docker/docker/api/types/backend"
-	"github.com/docker/docker/image"
+	"github.com/fdurand/moby/api/types/backend"
+	"github.com/fdurand/moby/image"
 )
 
 // CommitImage creates a new image from a commit config.

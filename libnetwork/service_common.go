@@ -6,7 +6,7 @@ package libnetwork
 import (
 	"net"
 
-	"github.com/docker/docker/libnetwork/internal/setmatrix"
+	"github.com/fdurand/moby/libnetwork/internal/setmatrix"
 	"github.com/sirupsen/logrus"
 )
 

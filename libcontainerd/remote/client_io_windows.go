@@ -1,4 +1,4 @@
-package remote // import "github.com/docker/docker/libcontainerd/remote"
+package remote // import "github.com/fdurand/moby/libcontainerd/remote"
 
 import (
 	"io"

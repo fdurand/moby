@@ -6,10 +6,10 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/docker/docker/libnetwork/driverapi"
-	"github.com/docker/docker/libnetwork/idm"
-	"github.com/docker/docker/libnetwork/netlabel"
-	"github.com/docker/docker/libnetwork/types"
+	"github.com/fdurand/moby/libnetwork/driverapi"
+	"github.com/fdurand/moby/libnetwork/idm"
+	"github.com/fdurand/moby/libnetwork/netlabel"
+	"github.com/fdurand/moby/libnetwork/types"
 	"gotest.tools/v3/assert"
 	is "gotest.tools/v3/assert/cmp"
 )

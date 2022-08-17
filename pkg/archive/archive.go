@@ -1,4 +1,4 @@
-package archive // import "github.com/docker/docker/pkg/archive"
+package archive // import "github.com/fdurand/moby/pkg/archive"
 
 import (
 	"archive/tar"
@@ -19,11 +19,11 @@ import (
 	"time"
 
 	"github.com/containerd/containerd/pkg/userns"
-	"github.com/docker/docker/pkg/fileutils"
-	"github.com/docker/docker/pkg/idtools"
-	"github.com/docker/docker/pkg/ioutils"
-	"github.com/docker/docker/pkg/pools"
-	"github.com/docker/docker/pkg/system"
+	"github.com/fdurand/moby/pkg/fileutils"
+	"github.com/fdurand/moby/pkg/idtools"
+	"github.com/fdurand/moby/pkg/ioutils"
+	"github.com/fdurand/moby/pkg/pools"
+	"github.com/fdurand/moby/pkg/system"
 	"github.com/klauspost/compress/zstd"
 	"github.com/pkg/errors"
 	"github.com/sirupsen/logrus"

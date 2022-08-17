@@ -13,9 +13,9 @@ import (
 	"time"
 
 	"github.com/creack/pty"
-	"github.com/docker/docker/api/types"
-	"github.com/docker/docker/client"
-	"github.com/docker/docker/testutil/request"
+	"github.com/fdurand/moby/api/types"
+	"github.com/fdurand/moby/client"
+	"github.com/fdurand/moby/testutil/request"
 	"gotest.tools/v3/assert"
 )
 

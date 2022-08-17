@@ -1,13 +1,13 @@
-package types // import "github.com/docker/docker/api/types"
+package types // import "github.com/fdurand/moby/api/types"
 
 import (
 	"bufio"
 	"io"
 	"net"
 
-	"github.com/docker/docker/api/types/container"
-	"github.com/docker/docker/api/types/filters"
-	"github.com/docker/docker/api/types/registry"
+	"github.com/fdurand/moby/api/types/container"
+	"github.com/fdurand/moby/api/types/filters"
+	"github.com/fdurand/moby/api/types/registry"
 	units "github.com/docker/go-units"
 )
 

@@ -4,7 +4,7 @@ import (
 	"context"
 	"io"
 
-	"github.com/docker/docker/api/types/registry"
+	"github.com/fdurand/moby/api/types/registry"
 )
 
 // PushImage initiates a push operation on the repository named localName.

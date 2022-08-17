@@ -1,10 +1,10 @@
-package image // import "github.com/docker/docker/image"
+package image // import "github.com/fdurand/moby/image"
 
 import (
 	"fmt"
 	"testing"
 
-	"github.com/docker/docker/layer"
+	"github.com/fdurand/moby/layer"
 	"gotest.tools/v3/assert"
 	"gotest.tools/v3/assert/cmp"
 )

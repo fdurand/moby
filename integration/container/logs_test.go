@@ -1,4 +1,4 @@
-package container // import "github.com/docker/docker/integration/container"
+package container // import "github.com/fdurand/moby/integration/container"
 
 import (
 	"bytes"
@@ -8,12 +8,12 @@ import (
 	"testing"
 	"time"
 
-	"github.com/docker/docker/api/types"
-	"github.com/docker/docker/daemon/logger/jsonfilelog"
-	"github.com/docker/docker/daemon/logger/local"
-	"github.com/docker/docker/integration/internal/container"
-	"github.com/docker/docker/integration/internal/termtest"
-	"github.com/docker/docker/pkg/stdcopy"
+	"github.com/fdurand/moby/api/types"
+	"github.com/fdurand/moby/daemon/logger/jsonfilelog"
+	"github.com/fdurand/moby/daemon/logger/local"
+	"github.com/fdurand/moby/integration/internal/container"
+	"github.com/fdurand/moby/integration/internal/termtest"
+	"github.com/fdurand/moby/pkg/stdcopy"
 	"gotest.tools/v3/assert"
 	"gotest.tools/v3/assert/cmp"
 	"gotest.tools/v3/poll"
@@ -160,7 +160,7 @@ func testLogs(t *testing.T, logDriver string) {
 				// Check only that the raw output stream contains strings
 				// that were printed to container's stdout and stderr.
 				// This is a workaround for the backspace being outputted in an unexpected place
-				// which breaks the parsed output: https://github.com/moby/moby/issues/43710
+				// which breaks the parsed output: https://github.com/fdurand/moby/issues/43710
 				if strings.Contains(testEnv.DaemonInfo.OperatingSystem, "Windows Server Version 1809") {
 					if tC.logOps.ShowStdout {
 						assert.Check(t, cmp.Contains(stdout.String(), "this is fine"))

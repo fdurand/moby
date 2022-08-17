@@ -4,11 +4,11 @@ import (
 	"fmt"
 	"log"
 
-	"github.com/docker/docker/libnetwork"
-	"github.com/docker/docker/libnetwork/config"
-	"github.com/docker/docker/libnetwork/netlabel"
-	"github.com/docker/docker/libnetwork/options"
-	"github.com/docker/docker/pkg/reexec"
+	"github.com/fdurand/moby/libnetwork"
+	"github.com/fdurand/moby/libnetwork/config"
+	"github.com/fdurand/moby/libnetwork/netlabel"
+	"github.com/fdurand/moby/libnetwork/options"
+	"github.com/fdurand/moby/pkg/reexec"
 )
 
 func main() {

@@ -1,10 +1,10 @@
 package ivmanager
 
 import (
-	"github.com/docker/docker/libnetwork/datastore"
-	"github.com/docker/docker/libnetwork/discoverapi"
-	"github.com/docker/docker/libnetwork/driverapi"
-	"github.com/docker/docker/libnetwork/types"
+	"github.com/fdurand/moby/libnetwork/datastore"
+	"github.com/fdurand/moby/libnetwork/discoverapi"
+	"github.com/fdurand/moby/libnetwork/driverapi"
+	"github.com/fdurand/moby/libnetwork/types"
 )
 
 const networkType = "ipvlan"

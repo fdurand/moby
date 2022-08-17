@@ -1,7 +1,7 @@
 //go:build linux
 // +build linux
 
-package overlayutils // import "github.com/docker/docker/daemon/graphdriver/overlayutils"
+package overlayutils // import "github.com/fdurand/moby/daemon/graphdriver/overlayutils"
 
 import (
 	"fmt"
@@ -10,7 +10,7 @@ import (
 	"path/filepath"
 
 	"github.com/containerd/containerd/pkg/userns"
-	"github.com/docker/docker/daemon/graphdriver"
+	"github.com/fdurand/moby/daemon/graphdriver"
 	"github.com/pkg/errors"
 	"github.com/sirupsen/logrus"
 	"golang.org/x/sys/unix"
@@ -44,7 +44,7 @@ func SupportsOverlay(d string, checkMultipleLowers bool) error {
 	if os.Getenv("_DOCKERD_ROOTLESS_SELINUX") == "1" {
 		// Kernel 5.11 introduced support for rootless overlayfs, but incompatible with SELinux,
 		// so fallback to fuse-overlayfs.
-		// https://github.com/moby/moby/issues/42333
+		// https://github.com/fdurand/moby/issues/42333
 		return errors.New("overlay is not supported for Rootless with SELinux")
 	}
 

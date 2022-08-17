@@ -19,14 +19,14 @@ import (
 	"time"
 
 	"github.com/cloudflare/cfssl/helpers"
-	"github.com/docker/docker/api/types"
-	"github.com/docker/docker/api/types/swarm"
-	"github.com/docker/docker/integration-cli/checker"
-	"github.com/docker/docker/integration-cli/cli"
-	"github.com/docker/docker/integration-cli/daemon"
-	"github.com/docker/docker/libnetwork/driverapi"
-	"github.com/docker/docker/libnetwork/ipamapi"
-	remoteipam "github.com/docker/docker/libnetwork/ipams/remote/api"
+	"github.com/fdurand/moby/api/types"
+	"github.com/fdurand/moby/api/types/swarm"
+	"github.com/fdurand/moby/integration-cli/checker"
+	"github.com/fdurand/moby/integration-cli/cli"
+	"github.com/fdurand/moby/integration-cli/daemon"
+	"github.com/fdurand/moby/libnetwork/driverapi"
+	"github.com/fdurand/moby/libnetwork/ipamapi"
+	remoteipam "github.com/fdurand/moby/libnetwork/ipams/remote/api"
 	"github.com/moby/swarmkit/v2/ca/keyutils"
 	"github.com/vishvananda/netlink"
 	"gotest.tools/v3/assert"
@@ -527,7 +527,7 @@ func (s *DockerSwarmSuite) TestSwarmCreateServiceWithNoIngressNetwork(c *testing
 }
 
 // Test case for #24108, also the case from:
-// https://github.com/docker/docker/pull/24620#issuecomment-233715656
+// https://github.com/fdurand/moby/pull/24620#issuecomment-233715656
 func (s *DockerSwarmSuite) TestSwarmTaskListFilter(c *testing.T) {
 	d := s.AddDaemon(c, true, true)
 
@@ -1506,7 +1506,7 @@ func (s *DockerSwarmSuite) TestSwarmNetworkCreateIssue27866(c *testing.T) {
 	assert.NilError(c, err, "out: %v", out)
 }
 
-// Test case for https://github.com/docker/docker/pull/27938#issuecomment-265768303
+// Test case for https://github.com/fdurand/moby/pull/27938#issuecomment-265768303
 // This test creates two networks with the same name sequentially, with various drivers.
 // Since the operations in this test are done sequentially, the 2nd call should fail with
 // "network with name FOO already exists".

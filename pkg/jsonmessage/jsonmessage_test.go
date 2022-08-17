@@ -1,4 +1,4 @@
-package jsonmessage // import "github.com/docker/docker/pkg/jsonmessage"
+package jsonmessage // import "github.com/fdurand/moby/pkg/jsonmessage"
 
 import (
 	"bytes"

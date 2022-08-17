@@ -1,12 +1,12 @@
-package daemon // import "github.com/docker/docker/daemon"
+package daemon // import "github.com/fdurand/moby/daemon"
 
 import (
 	"context"
 	"fmt"
 
-	"github.com/docker/docker/api/server/router/system"
-	"github.com/docker/docker/api/types"
-	"github.com/docker/docker/api/types/volume"
+	"github.com/fdurand/moby/api/server/router/system"
+	"github.com/fdurand/moby/api/types"
+	"github.com/fdurand/moby/api/types/volume"
 	"golang.org/x/sync/errgroup"
 )
 

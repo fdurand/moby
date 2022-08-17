@@ -5,8 +5,8 @@ import (
 	"log"
 	"net/http"
 
-	"github.com/docker/docker/libnetwork/diagnostic"
-	"github.com/docker/docker/libnetwork/networkdb"
+	"github.com/fdurand/moby/libnetwork/diagnostic"
+	"github.com/fdurand/moby/libnetwork/networkdb"
 	events "github.com/docker/go-events"
 	"github.com/sirupsen/logrus"
 )

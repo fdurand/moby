@@ -1,13 +1,13 @@
 //go:build !windows
 // +build !windows
 
-package archive // import "github.com/docker/docker/pkg/archive"
+package archive // import "github.com/fdurand/moby/pkg/archive"
 
 import (
 	"os"
 	"syscall"
 
-	"github.com/docker/docker/pkg/system"
+	"github.com/fdurand/moby/pkg/system"
 	"golang.org/x/sys/unix"
 )
 
@@ -18,12 +18,12 @@ func statDifferent(oldStat *system.StatT, newStat *system.StatT) bool {
 		oldStat.GID() != newStat.GID() ||
 		oldStat.Rdev() != newStat.Rdev() ||
 		// Don't look at size or modification time for dirs, its not a good
-		// measure of change. See https://github.com/moby/moby/issues/9874
+		// measure of change. See https://github.com/fdurand/moby/issues/9874
 		// for a description of the issue with modification time, and
-		// https://github.com/moby/moby/pull/11422 for the change.
+		// https://github.com/fdurand/moby/pull/11422 for the change.
 		// (Note that in the Windows implementation of this function,
 		// modification time IS taken as a change). See
-		// https://github.com/moby/moby/pull/37982 for more information.
+		// https://github.com/fdurand/moby/pull/37982 for more information.
 		(oldStat.Mode()&unix.S_IFDIR != unix.S_IFDIR &&
 			(!sameFsTimeSpec(oldStat.Mtim(), newStat.Mtim()) || (oldStat.Size() != newStat.Size()))) {
 		return true

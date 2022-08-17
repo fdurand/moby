@@ -1,14 +1,14 @@
 //go:build !windows
 // +build !windows
 
-package chrootarchive // import "github.com/docker/docker/pkg/chrootarchive"
+package chrootarchive // import "github.com/fdurand/moby/pkg/chrootarchive"
 
 import (
 	"fmt"
 	"io"
 	"os"
 
-	"github.com/docker/docker/pkg/reexec"
+	"github.com/fdurand/moby/pkg/reexec"
 )
 
 func init() {

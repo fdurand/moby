@@ -1,11 +1,11 @@
 //go:build !linux && !freebsd && !windows
 // +build !linux,!freebsd,!windows
 
-package daemon // import "github.com/docker/docker/daemon"
+package daemon // import "github.com/fdurand/moby/daemon"
 
 import (
-	"github.com/docker/docker/daemon/config"
-	"github.com/docker/docker/pkg/sysinfo"
+	"github.com/fdurand/moby/daemon/config"
+	"github.com/fdurand/moby/pkg/sysinfo"
 )
 
 const platformSupported = false

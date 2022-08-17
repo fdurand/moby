@@ -1,4 +1,4 @@
-package daemon // import "github.com/docker/docker/daemon"
+package daemon // import "github.com/fdurand/moby/daemon"
 
 import (
 	"encoding/json"
@@ -7,12 +7,12 @@ import (
 	"path/filepath"
 	"strings"
 
-	containertypes "github.com/docker/docker/api/types/container"
-	"github.com/docker/docker/container"
-	"github.com/docker/docker/errdefs"
-	"github.com/docker/docker/oci"
-	"github.com/docker/docker/pkg/sysinfo"
-	"github.com/docker/docker/pkg/system"
+	containertypes "github.com/fdurand/moby/api/types/container"
+	"github.com/fdurand/moby/container"
+	"github.com/fdurand/moby/errdefs"
+	"github.com/fdurand/moby/oci"
+	"github.com/fdurand/moby/pkg/sysinfo"
+	"github.com/fdurand/moby/pkg/system"
 	specs "github.com/opencontainers/runtime-spec/specs-go"
 	"github.com/pkg/errors"
 	"github.com/sirupsen/logrus"

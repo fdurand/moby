@@ -1,4 +1,4 @@
-package specconv // import "github.com/docker/docker/rootless/specconv"
+package specconv // import "github.com/fdurand/moby/rootless/specconv"
 
 import (
 	"os"

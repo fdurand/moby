@@ -1,9 +1,9 @@
-package registry // import "github.com/docker/docker/registry"
+package registry // import "github.com/fdurand/moby/registry"
 
 import (
 	"testing"
 
-	"github.com/docker/docker/api/types/registry"
+	"github.com/fdurand/moby/api/types/registry"
 	"gotest.tools/v3/assert"
 )
 

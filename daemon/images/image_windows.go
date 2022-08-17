@@ -1,9 +1,9 @@
 package images
 
 import (
-	"github.com/docker/docker/image"
-	"github.com/docker/docker/layer"
-	"github.com/docker/docker/pkg/system"
+	"github.com/fdurand/moby/image"
+	"github.com/fdurand/moby/layer"
+	"github.com/fdurand/moby/pkg/system"
 	"github.com/pkg/errors"
 )
 

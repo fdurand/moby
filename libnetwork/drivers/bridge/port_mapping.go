@@ -10,7 +10,7 @@ import (
 	"net"
 	"sync"
 
-	"github.com/docker/docker/libnetwork/types"
+	"github.com/fdurand/moby/libnetwork/types"
 	"github.com/ishidawataru/sctp"
 	"github.com/sirupsen/logrus"
 )
@@ -55,7 +55,7 @@ func (n *bridgeNetwork) allocatePortsInternal(bindings []types.PortBinding, cont
 		}
 
 		// skip adding implicit v6 addr, when the kernel was booted with `ipv6.disable=1`
-		// https://github.com/moby/moby/issues/42288
+		// https://github.com/fdurand/moby/issues/42288
 		isV6Binding := c.HostIP != nil && c.HostIP.To4() == nil
 		if !isV6Binding && !IsV6Listenable() {
 			continue
@@ -236,7 +236,7 @@ func IsV6Listenable() bool {
 		if err != nil {
 			// When the kernel was booted with `ipv6.disable=1`,
 			// we get err "listen tcp6 [::1]:0: socket: address family not supported by protocol"
-			// https://github.com/moby/moby/issues/42288
+			// https://github.com/fdurand/moby/issues/42288
 			logrus.Debugf("port_mapping: v6Listenable=false (%v)", err)
 		} else {
 			v6ListenableCached = true

@@ -1,4 +1,4 @@
-package client // import "github.com/docker/docker/client"
+package client // import "github.com/fdurand/moby/client"
 
 import (
 	"bytes"
@@ -10,10 +10,10 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/docker/docker/api/types"
-	"github.com/docker/docker/api/types/container"
-	"github.com/docker/docker/api/types/registry"
-	"github.com/docker/docker/errdefs"
+	"github.com/fdurand/moby/api/types"
+	"github.com/fdurand/moby/api/types/container"
+	"github.com/fdurand/moby/api/types/registry"
+	"github.com/fdurand/moby/errdefs"
 	units "github.com/docker/go-units"
 )
 

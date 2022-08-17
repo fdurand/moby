@@ -5,7 +5,7 @@ import (
 	"net"
 	"testing"
 
-	"github.com/docker/docker/libnetwork/types"
+	"github.com/fdurand/moby/libnetwork/types"
 )
 
 func TestIPDataMarshalling(t *testing.T) {

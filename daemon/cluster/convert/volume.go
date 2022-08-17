@@ -1,7 +1,7 @@
-package convert // import "github.com/docker/docker/daemon/cluster/convert"
+package convert // import "github.com/fdurand/moby/daemon/cluster/convert"
 
 import (
-	volumetypes "github.com/docker/docker/api/types/volume"
+	volumetypes "github.com/fdurand/moby/api/types/volume"
 	gogotypes "github.com/gogo/protobuf/types"
 	swarmapi "github.com/moby/swarmkit/v2/api"
 )

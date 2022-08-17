@@ -1,7 +1,7 @@
 package containerd
 
 import (
-	"github.com/docker/docker/builder"
+	"github.com/fdurand/moby/builder"
 )
 
 // MakeImageCache creates a stateful image cache.

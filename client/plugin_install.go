@@ -1,4 +1,4 @@
-package client // import "github.com/docker/docker/client"
+package client // import "github.com/fdurand/moby/client"
 
 import (
 	"context"
@@ -7,9 +7,9 @@ import (
 	"net/url"
 
 	"github.com/docker/distribution/reference"
-	"github.com/docker/docker/api/types"
-	"github.com/docker/docker/api/types/registry"
-	"github.com/docker/docker/errdefs"
+	"github.com/fdurand/moby/api/types"
+	"github.com/fdurand/moby/api/types/registry"
+	"github.com/fdurand/moby/errdefs"
 	"github.com/pkg/errors"
 )
 

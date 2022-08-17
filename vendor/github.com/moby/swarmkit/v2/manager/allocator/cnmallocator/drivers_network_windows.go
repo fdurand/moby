@@ -1,8 +1,8 @@
 package cnmallocator
 
 import (
-	"github.com/docker/docker/libnetwork/drivers/overlay/ovmanager"
-	"github.com/docker/docker/libnetwork/drivers/remote"
+	"github.com/fdurand/moby/libnetwork/drivers/overlay/ovmanager"
+	"github.com/fdurand/moby/libnetwork/drivers/remote"
 	"github.com/moby/swarmkit/v2/manager/allocator/networkallocator"
 )
 

@@ -1,4 +1,4 @@
-package images // import "github.com/docker/docker/daemon/images"
+package images // import "github.com/fdurand/moby/daemon/images"
 
 import (
 	"context"
@@ -8,13 +8,13 @@ import (
 	"time"
 
 	"github.com/docker/distribution/reference"
-	"github.com/docker/docker/api/types"
-	"github.com/docker/docker/api/types/events"
-	"github.com/docker/docker/api/types/filters"
-	timetypes "github.com/docker/docker/api/types/time"
-	"github.com/docker/docker/errdefs"
-	"github.com/docker/docker/image"
-	"github.com/docker/docker/layer"
+	"github.com/fdurand/moby/api/types"
+	"github.com/fdurand/moby/api/types/events"
+	"github.com/fdurand/moby/api/types/filters"
+	timetypes "github.com/fdurand/moby/api/types/time"
+	"github.com/fdurand/moby/errdefs"
+	"github.com/fdurand/moby/image"
+	"github.com/fdurand/moby/layer"
 	"github.com/opencontainers/go-digest"
 	"github.com/pkg/errors"
 	"github.com/sirupsen/logrus"

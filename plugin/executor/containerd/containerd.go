@@ -1,4 +1,4 @@
-package containerd // import "github.com/docker/docker/plugin/executor/containerd"
+package containerd // import "github.com/fdurand/moby/plugin/executor/containerd"
 
 import (
 	"context"
@@ -8,10 +8,10 @@ import (
 
 	"github.com/containerd/containerd"
 	"github.com/containerd/containerd/cio"
-	"github.com/docker/docker/api/types"
-	"github.com/docker/docker/errdefs"
-	"github.com/docker/docker/libcontainerd"
-	libcontainerdtypes "github.com/docker/docker/libcontainerd/types"
+	"github.com/fdurand/moby/api/types"
+	"github.com/fdurand/moby/errdefs"
+	"github.com/fdurand/moby/libcontainerd"
+	libcontainerdtypes "github.com/fdurand/moby/libcontainerd/types"
 	specs "github.com/opencontainers/runtime-spec/specs-go"
 	"github.com/pkg/errors"
 	"github.com/sirupsen/logrus"

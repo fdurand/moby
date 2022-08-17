@@ -1,10 +1,10 @@
-package cache // import "github.com/docker/docker/image/cache"
+package cache // import "github.com/fdurand/moby/image/cache"
 
 import (
 	"testing"
 
-	"github.com/docker/docker/api/types/container"
-	"github.com/docker/docker/api/types/strslice"
+	"github.com/fdurand/moby/api/types/container"
+	"github.com/fdurand/moby/api/types/strslice"
 	"github.com/docker/go-connections/nat"
 )
 

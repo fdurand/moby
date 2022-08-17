@@ -8,8 +8,8 @@
 // At some future time, this may be replaced with something that sparks less
 // controversy, but for now it will remain as-is.
 //
-// See also https://github.com/moby/moby/pull/43210#issuecomment-1029934277
-package namesgenerator // import "github.com/docker/docker/pkg/namesgenerator"
+// See also https://github.com/fdurand/moby/pull/43210#issuecomment-1029934277
+package namesgenerator // import "github.com/fdurand/moby/pkg/namesgenerator"
 
 import (
 	"math/rand"

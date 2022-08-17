@@ -1,7 +1,7 @@
 //go:build !windows
 // +build !windows
 
-package daemon // import "github.com/docker/docker/daemon"
+package daemon // import "github.com/fdurand/moby/daemon"
 
 import (
 	"context"
@@ -9,12 +9,12 @@ import (
 	"os"
 	"path/filepath"
 
-	containertypes "github.com/docker/docker/api/types/container"
-	mounttypes "github.com/docker/docker/api/types/mount"
-	"github.com/docker/docker/container"
-	"github.com/docker/docker/oci"
-	"github.com/docker/docker/pkg/stringid"
-	volumeopts "github.com/docker/docker/volume/service/opts"
+	containertypes "github.com/fdurand/moby/api/types/container"
+	mounttypes "github.com/fdurand/moby/api/types/mount"
+	"github.com/fdurand/moby/container"
+	"github.com/fdurand/moby/oci"
+	"github.com/fdurand/moby/pkg/stringid"
+	volumeopts "github.com/fdurand/moby/volume/service/opts"
 	"github.com/opencontainers/selinux/go-selinux/label"
 	"github.com/sirupsen/logrus"
 )

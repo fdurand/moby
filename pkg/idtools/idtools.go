@@ -1,4 +1,4 @@
-package idtools // import "github.com/docker/docker/pkg/idtools"
+package idtools // import "github.com/fdurand/moby/pkg/idtools"
 
 import (
 	"bufio"

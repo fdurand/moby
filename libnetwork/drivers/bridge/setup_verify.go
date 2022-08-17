@@ -7,8 +7,8 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/docker/docker/libnetwork/ns"
-	"github.com/docker/docker/libnetwork/types"
+	"github.com/fdurand/moby/libnetwork/ns"
+	"github.com/fdurand/moby/libnetwork/types"
 	"github.com/sirupsen/logrus"
 	"github.com/vishvananda/netlink"
 )

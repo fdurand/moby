@@ -1,4 +1,4 @@
-package client // import "github.com/docker/docker/client"
+package client // import "github.com/fdurand/moby/client"
 
 import (
 	"context"
@@ -6,8 +6,8 @@ import (
 	"net/url"
 	"time"
 
-	"github.com/docker/docker/api/types"
-	timetypes "github.com/docker/docker/api/types/time"
+	"github.com/fdurand/moby/api/types"
+	timetypes "github.com/fdurand/moby/api/types/time"
 	"github.com/pkg/errors"
 )
 

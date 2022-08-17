@@ -1,1 +1,1 @@
-package graphtest // import "github.com/docker/docker/daemon/graphdriver/graphtest"
+package graphtest // import "github.com/fdurand/moby/daemon/graphdriver/graphtest"

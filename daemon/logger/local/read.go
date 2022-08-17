@@ -7,10 +7,10 @@ import (
 	"fmt"
 	"io"
 
-	"github.com/docker/docker/api/types/plugins/logdriver"
-	"github.com/docker/docker/daemon/logger"
-	"github.com/docker/docker/daemon/logger/loggerutils"
-	"github.com/docker/docker/errdefs"
+	"github.com/fdurand/moby/api/types/plugins/logdriver"
+	"github.com/fdurand/moby/daemon/logger"
+	"github.com/fdurand/moby/daemon/logger/loggerutils"
+	"github.com/fdurand/moby/errdefs"
 	"github.com/pkg/errors"
 )
 

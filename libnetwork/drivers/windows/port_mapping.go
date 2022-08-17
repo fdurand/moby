@@ -9,8 +9,8 @@ import (
 	"fmt"
 	"net"
 
-	"github.com/docker/docker/libnetwork/portmapper"
-	"github.com/docker/docker/libnetwork/types"
+	"github.com/fdurand/moby/libnetwork/portmapper"
+	"github.com/fdurand/moby/libnetwork/types"
 	"github.com/ishidawataru/sctp"
 	"github.com/sirupsen/logrus"
 )

@@ -1,4 +1,4 @@
-package container // import "github.com/docker/docker/integration/container"
+package container // import "github.com/fdurand/moby/integration/container"
 
 import (
 	"context"
@@ -9,11 +9,11 @@ import (
 	"testing"
 	"time"
 
-	"github.com/docker/docker/api/types"
-	mounttypes "github.com/docker/docker/api/types/mount"
-	"github.com/docker/docker/client"
-	"github.com/docker/docker/integration/internal/container"
-	"github.com/docker/docker/testutil/request"
+	"github.com/fdurand/moby/api/types"
+	mounttypes "github.com/fdurand/moby/api/types/mount"
+	"github.com/fdurand/moby/client"
+	"github.com/fdurand/moby/integration/internal/container"
+	"github.com/fdurand/moby/testutil/request"
 	"gotest.tools/v3/assert"
 	is "gotest.tools/v3/assert/cmp"
 	"gotest.tools/v3/poll"
@@ -31,7 +31,7 @@ func containerExec(t *testing.T, client client.APIClient, cID string, cmd []stri
 }
 
 func TestCheckpoint(t *testing.T) {
-	t.Skip("TestCheckpoint is broken; see https://github.com/moby/moby/issues/38963")
+	t.Skip("TestCheckpoint is broken; see https://github.com/fdurand/moby/issues/38963")
 	skip.If(t, testEnv.DaemonInfo.OSType == "windows")
 	skip.If(t, !testEnv.DaemonInfo.ExperimentalBuild)
 

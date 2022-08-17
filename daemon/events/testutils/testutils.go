@@ -1,4 +1,4 @@
-package testutils // import "github.com/docker/docker/daemon/events/testutils"
+package testutils // import "github.com/fdurand/moby/daemon/events/testutils"
 
 import (
 	"fmt"
@@ -6,8 +6,8 @@ import (
 	"strings"
 	"time"
 
-	"github.com/docker/docker/api/types/events"
-	timetypes "github.com/docker/docker/api/types/time"
+	"github.com/fdurand/moby/api/types/events"
+	timetypes "github.com/fdurand/moby/api/types/time"
 )
 
 var (

@@ -1,4 +1,4 @@
-package events // import "github.com/docker/docker/api/types/events"
+package events // import "github.com/fdurand/moby/api/types/events"
 
 // Type is used for event-types.
 type Type = string

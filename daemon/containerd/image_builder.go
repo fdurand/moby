@@ -3,8 +3,8 @@ package containerd
 import (
 	"context"
 
-	"github.com/docker/docker/api/types/backend"
-	"github.com/docker/docker/builder"
+	"github.com/fdurand/moby/api/types/backend"
+	"github.com/fdurand/moby/builder"
 )
 
 // GetImageAndReleasableLayer returns an image and releaseable layer for a

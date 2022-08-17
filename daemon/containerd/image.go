@@ -1,7 +1,7 @@
 package containerd
 
 import (
-	"github.com/docker/docker/image"
+	"github.com/fdurand/moby/image"
 	specs "github.com/opencontainers/image-spec/specs-go/v1"
 )
 

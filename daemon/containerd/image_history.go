@@ -1,6 +1,6 @@
 package containerd
 
-import imagetype "github.com/docker/docker/api/types/image"
+import imagetype "github.com/fdurand/moby/api/types/image"
 
 // ImageHistory returns a slice of ImageHistory structures for the specified
 // image name by walking the image lineage.

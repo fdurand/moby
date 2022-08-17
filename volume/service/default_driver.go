@@ -1,12 +1,12 @@
 //go:build linux || windows
 // +build linux windows
 
-package service // import "github.com/docker/docker/volume/service"
+package service // import "github.com/fdurand/moby/volume/service"
 import (
-	"github.com/docker/docker/pkg/idtools"
-	"github.com/docker/docker/volume"
-	"github.com/docker/docker/volume/drivers"
-	"github.com/docker/docker/volume/local"
+	"github.com/fdurand/moby/pkg/idtools"
+	"github.com/fdurand/moby/volume"
+	"github.com/fdurand/moby/volume/drivers"
+	"github.com/fdurand/moby/volume/local"
 	"github.com/pkg/errors"
 )
 

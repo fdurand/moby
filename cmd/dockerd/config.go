@@ -1,9 +1,9 @@
 package main
 
 import (
-	"github.com/docker/docker/daemon/config"
-	"github.com/docker/docker/opts"
-	"github.com/docker/docker/registry"
+	"github.com/fdurand/moby/daemon/config"
+	"github.com/fdurand/moby/opts"
+	"github.com/fdurand/moby/registry"
 	"github.com/spf13/pflag"
 )
 

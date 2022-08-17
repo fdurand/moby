@@ -1,13 +1,13 @@
-package container // import "github.com/docker/docker/integration/container"
+package container // import "github.com/fdurand/moby/integration/container"
 
 import (
 	"context"
 	"testing"
 	"time"
 
-	"github.com/docker/docker/client"
-	"github.com/docker/docker/integration/internal/container"
-	"github.com/docker/docker/testutil/request"
+	"github.com/fdurand/moby/client"
+	"github.com/fdurand/moby/integration/internal/container"
+	"github.com/fdurand/moby/testutil/request"
 	"gotest.tools/v3/assert"
 	is "gotest.tools/v3/assert/cmp"
 	"gotest.tools/v3/poll"
@@ -157,7 +157,7 @@ func TestInspectOomKilledTrue(t *testing.T) {
 	skip.If(t, testEnv.DaemonInfo.OSType == "windows")
 	skip.If(t, testEnv.DaemonInfo.CgroupDriver == "none")
 	skip.If(t, !testEnv.DaemonInfo.MemoryLimit || !testEnv.DaemonInfo.SwapLimit)
-	skip.If(t, testEnv.DaemonInfo.CgroupVersion == "2", "FIXME: flaky on cgroup v2 (https://github.com/moby/moby/issues/41929)")
+	skip.If(t, testEnv.DaemonInfo.CgroupVersion == "2", "FIXME: flaky on cgroup v2 (https://github.com/fdurand/moby/issues/41929)")
 
 	defer setupTest(t)()
 	ctx := context.Background()

@@ -14,18 +14,18 @@ import (
 	"testing"
 	"time"
 
-	"github.com/docker/docker/api/types"
-	"github.com/docker/docker/api/types/versions/v1p20"
-	"github.com/docker/docker/integration-cli/cli"
-	"github.com/docker/docker/integration-cli/daemon"
-	"github.com/docker/docker/libnetwork/driverapi"
-	remoteapi "github.com/docker/docker/libnetwork/drivers/remote/api"
-	"github.com/docker/docker/libnetwork/ipamapi"
-	remoteipam "github.com/docker/docker/libnetwork/ipams/remote/api"
-	"github.com/docker/docker/libnetwork/netlabel"
-	"github.com/docker/docker/pkg/stringid"
-	"github.com/docker/docker/runconfig"
-	testdaemon "github.com/docker/docker/testutil/daemon"
+	"github.com/fdurand/moby/api/types"
+	"github.com/fdurand/moby/api/types/versions/v1p20"
+	"github.com/fdurand/moby/integration-cli/cli"
+	"github.com/fdurand/moby/integration-cli/daemon"
+	"github.com/fdurand/moby/libnetwork/driverapi"
+	remoteapi "github.com/fdurand/moby/libnetwork/drivers/remote/api"
+	"github.com/fdurand/moby/libnetwork/ipamapi"
+	remoteipam "github.com/fdurand/moby/libnetwork/ipams/remote/api"
+	"github.com/fdurand/moby/libnetwork/netlabel"
+	"github.com/fdurand/moby/pkg/stringid"
+	"github.com/fdurand/moby/runconfig"
+	testdaemon "github.com/fdurand/moby/testutil/daemon"
 	"github.com/vishvananda/netlink"
 	"golang.org/x/sys/unix"
 	"gotest.tools/v3/assert"
@@ -1737,7 +1737,7 @@ func (s *DockerNetworkSuite) TestDockerNetworkDisconnectFromBridge(c *testing.T)
 	assert.NilError(c, err)
 }
 
-// TestConntrackFlowsLeak covers the failure scenario of ticket: https://github.com/docker/docker/issues/8795
+// TestConntrackFlowsLeak covers the failure scenario of ticket: https://github.com/fdurand/moby/issues/8795
 // Validates that conntrack is correctly cleaned once a container is destroyed
 func (s *DockerNetworkSuite) TestConntrackFlowsLeak(c *testing.T) {
 	testRequires(c, IsAmd64, DaemonIsLinux, Network, testEnv.IsLocalDaemon)

@@ -6,9 +6,9 @@ import (
 	"os"
 	"path/filepath"
 
-	"github.com/docker/docker/libnetwork/resolvconf"
-	"github.com/docker/docker/libnetwork/types"
-	"github.com/docker/docker/pkg/idtools"
+	"github.com/fdurand/moby/libnetwork/resolvconf"
+	"github.com/fdurand/moby/libnetwork/types"
+	"github.com/fdurand/moby/pkg/idtools"
 	"github.com/moby/buildkit/util/flightcontrol"
 	"github.com/pkg/errors"
 )

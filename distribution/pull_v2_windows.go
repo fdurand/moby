@@ -1,4 +1,4 @@
-package distribution // import "github.com/docker/docker/distribution"
+package distribution // import "github.com/fdurand/moby/distribution"
 
 import (
 	"context"
@@ -17,7 +17,7 @@ import (
 	"github.com/docker/distribution/manifest/manifestlist"
 	"github.com/docker/distribution/manifest/schema2"
 	"github.com/docker/distribution/registry/client/transport"
-	"github.com/docker/docker/pkg/system"
+	"github.com/fdurand/moby/pkg/system"
 	specs "github.com/opencontainers/image-spec/specs-go/v1"
 	"github.com/sirupsen/logrus"
 )
@@ -121,7 +121,7 @@ func (mbv manifestsByVersion) Swap(i, j int) {
 }
 
 // checkImageCompatibility blocks pulling incompatible images based on a later OS build
-// Fixes https://github.com/moby/moby/issues/36184.
+// Fixes https://github.com/fdurand/moby/issues/36184.
 func checkImageCompatibility(imageOS, imageOSVersion string) error {
 	if imageOS == "windows" {
 		hostOSV := osversion.Get()

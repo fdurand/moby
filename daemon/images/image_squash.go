@@ -1,12 +1,12 @@
-package images // import "github.com/docker/docker/daemon/images"
+package images // import "github.com/fdurand/moby/daemon/images"
 
 import (
 	"encoding/json"
 	"fmt"
 	"time"
 
-	"github.com/docker/docker/image"
-	"github.com/docker/docker/layer"
+	"github.com/fdurand/moby/image"
+	"github.com/fdurand/moby/layer"
 	"github.com/pkg/errors"
 )
 

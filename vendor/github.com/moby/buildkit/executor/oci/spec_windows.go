@@ -5,7 +5,7 @@ package oci
 
 import (
 	"github.com/containerd/containerd/oci"
-	"github.com/docker/docker/pkg/idtools"
+	"github.com/fdurand/moby/pkg/idtools"
 	"github.com/moby/buildkit/solver/pb"
 	"github.com/pkg/errors"
 )

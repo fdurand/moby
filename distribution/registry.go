@@ -1,4 +1,4 @@
-package distribution // import "github.com/docker/docker/distribution"
+package distribution // import "github.com/fdurand/moby/distribution"
 
 import (
 	"context"
@@ -13,9 +13,9 @@ import (
 	"github.com/docker/distribution/registry/client"
 	"github.com/docker/distribution/registry/client/auth"
 	"github.com/docker/distribution/registry/client/transport"
-	registrytypes "github.com/docker/docker/api/types/registry"
-	"github.com/docker/docker/dockerversion"
-	"github.com/docker/docker/registry"
+	registrytypes "github.com/fdurand/moby/api/types/registry"
+	"github.com/fdurand/moby/dockerversion"
+	"github.com/fdurand/moby/registry"
 	ocispec "github.com/opencontainers/image-spec/specs-go/v1"
 )
 
@@ -25,8 +25,8 @@ var (
 		schema2.MediaTypeImageConfig,
 		ocispec.MediaTypeImageConfig,
 		// Handle unexpected values from https://github.com/docker/distribution/issues/1621
-		// (see also https://github.com/docker/docker/issues/22378,
-		// https://github.com/docker/docker/issues/30083)
+		// (see also https://github.com/fdurand/moby/issues/22378,
+		// https://github.com/fdurand/moby/issues/30083)
 		"application/octet-stream",
 		"application/json",
 		"text/html",

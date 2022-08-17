@@ -1,4 +1,4 @@
-package images // import "github.com/docker/docker/daemon/images"
+package images // import "github.com/fdurand/moby/daemon/images"
 
 import (
 	"context"
@@ -7,11 +7,11 @@ import (
 	"time"
 
 	"github.com/docker/distribution/reference"
-	"github.com/docker/docker/api/types"
-	"github.com/docker/docker/container"
-	"github.com/docker/docker/errdefs"
-	"github.com/docker/docker/image"
-	"github.com/docker/docker/pkg/stringid"
+	"github.com/fdurand/moby/api/types"
+	"github.com/fdurand/moby/container"
+	"github.com/fdurand/moby/errdefs"
+	"github.com/fdurand/moby/image"
+	"github.com/fdurand/moby/pkg/stringid"
 	"github.com/pkg/errors"
 )
 

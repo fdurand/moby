@@ -1,4 +1,4 @@
-package build // import "github.com/docker/docker/integration/build"
+package build // import "github.com/fdurand/moby/integration/build"
 
 import (
 	"bufio"
@@ -9,18 +9,18 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/docker/docker/api/types"
-	"github.com/docker/docker/integration/internal/container"
-	"github.com/docker/docker/pkg/jsonmessage"
-	"github.com/docker/docker/pkg/stdcopy"
-	"github.com/docker/docker/testutil/daemon"
-	"github.com/docker/docker/testutil/fakecontext"
-	"github.com/docker/docker/testutil/fixtures/load"
+	"github.com/fdurand/moby/api/types"
+	"github.com/fdurand/moby/integration/internal/container"
+	"github.com/fdurand/moby/pkg/jsonmessage"
+	"github.com/fdurand/moby/pkg/stdcopy"
+	"github.com/fdurand/moby/testutil/daemon"
+	"github.com/fdurand/moby/testutil/fakecontext"
+	"github.com/fdurand/moby/testutil/fixtures/load"
 	"gotest.tools/v3/assert"
 	"gotest.tools/v3/skip"
 )
 
-// Implements a test for https://github.com/moby/moby/issues/41723
+// Implements a test for https://github.com/fdurand/moby/issues/41723
 // Images built in a user-namespaced daemon should have capabilities serialised in
 // VFS_CAP_REVISION_2 (no user-namespace root uid) format rather than V3 (that includes
 // the root uid).

@@ -1415,7 +1415,7 @@ func (n *Node) ProcessRaftMessage(ctx context.Context, msg *api.ProcessRaftMessa
 	defer cancel()
 
 	// TODO(aaronl): Address changes are temporarily disabled.
-	// See https://github.com/docker/docker/issues/30455.
+	// See https://github.com/fdurand/moby/issues/30455.
 	// This should be reenabled in the future with additional
 	// safeguards (perhaps storing multiple addresses per node).
 	//if err := n.reportNewAddress(ctx, msg.Message.From); err != nil {
@@ -2141,7 +2141,7 @@ func (n *Node) reqTimeout() time.Duration {
 
 // stackDump outputs the runtime stack to os.StdErr.
 //
-// It is based on Moby's stack.Dump(); https://github.com/moby/moby/blob/471fd27709777d2cce3251129887e14e8bb2e0c7/pkg/stack/stackdump.go#L41-L57
+// It is based on Moby's stack.Dump(); https://github.com/fdurand/moby/blob/471fd27709777d2cce3251129887e14e8bb2e0c7/pkg/stack/stackdump.go#L41-L57
 func stackDump() {
 	var (
 		buf       []byte

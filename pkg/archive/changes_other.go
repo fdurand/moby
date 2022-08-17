@@ -1,7 +1,7 @@
 //go:build !linux
 // +build !linux
 
-package archive // import "github.com/docker/docker/pkg/archive"
+package archive // import "github.com/fdurand/moby/pkg/archive"
 
 import (
 	"fmt"
@@ -10,7 +10,7 @@ import (
 	"runtime"
 	"strings"
 
-	"github.com/docker/docker/pkg/system"
+	"github.com/fdurand/moby/pkg/system"
 )
 
 func collectFileInfoForChanges(oldDir, newDir string) (*FileInfo, *FileInfo, error) {

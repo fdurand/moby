@@ -1,4 +1,4 @@
-package dockerfile // import "github.com/docker/docker/builder/dockerfile"
+package dockerfile // import "github.com/fdurand/moby/builder/dockerfile"
 
 import (
 	"bytes"
@@ -7,10 +7,10 @@ import (
 	"strings"
 
 	"github.com/containerd/containerd/platforms"
-	"github.com/docker/docker/api/types/container"
-	"github.com/docker/docker/api/types/mount"
-	"github.com/docker/docker/pkg/idtools"
-	"github.com/docker/docker/pkg/jsonmessage"
+	"github.com/fdurand/moby/api/types/container"
+	"github.com/fdurand/moby/api/types/mount"
+	"github.com/fdurand/moby/pkg/idtools"
+	"github.com/fdurand/moby/pkg/jsonmessage"
 	"golang.org/x/sys/windows"
 )
 

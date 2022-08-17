@@ -1,8 +1,8 @@
-package types // import "github.com/docker/docker/api/types"
+package types // import "github.com/fdurand/moby/api/types"
 
 import (
-	"github.com/docker/docker/api/types/container"
-	"github.com/docker/docker/api/types/network"
+	"github.com/fdurand/moby/api/types/container"
+	"github.com/fdurand/moby/api/types/network"
 	specs "github.com/opencontainers/image-spec/specs-go/v1"
 )
 

@@ -7,12 +7,12 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/docker/docker/api/types"
-	"github.com/docker/docker/api/types/filters"
-	"github.com/docker/docker/client"
-	"github.com/docker/docker/integration-cli/cli"
-	"github.com/docker/docker/integration-cli/cli/build"
-	"github.com/docker/docker/testutil/request"
+	"github.com/fdurand/moby/api/types"
+	"github.com/fdurand/moby/api/types/filters"
+	"github.com/fdurand/moby/client"
+	"github.com/fdurand/moby/integration-cli/cli"
+	"github.com/fdurand/moby/integration-cli/cli/build"
+	"github.com/fdurand/moby/testutil/request"
 	"gotest.tools/v3/assert"
 )
 

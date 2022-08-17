@@ -12,7 +12,7 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/docker/docker/pkg/system"
+	"github.com/fdurand/moby/pkg/system"
 	"gotest.tools/v3/assert"
 )
 

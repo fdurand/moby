@@ -2,7 +2,7 @@ package containerd
 
 import (
 	"github.com/docker/distribution/reference"
-	"github.com/docker/docker/image"
+	"github.com/fdurand/moby/image"
 )
 
 // TagImage creates the tag specified by newTag, pointing to the image named

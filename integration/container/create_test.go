@@ -1,4 +1,4 @@
-package container // import "github.com/docker/docker/integration/container"
+package container // import "github.com/fdurand/moby/integration/container"
 
 import (
 	"context"
@@ -8,15 +8,15 @@ import (
 	"testing"
 	"time"
 
-	"github.com/docker/docker/api/types"
-	"github.com/docker/docker/api/types/container"
-	containertypes "github.com/docker/docker/api/types/container"
-	"github.com/docker/docker/api/types/network"
-	"github.com/docker/docker/api/types/versions"
-	"github.com/docker/docker/client"
-	"github.com/docker/docker/errdefs"
-	ctr "github.com/docker/docker/integration/internal/container"
-	"github.com/docker/docker/oci"
+	"github.com/fdurand/moby/api/types"
+	"github.com/fdurand/moby/api/types/container"
+	containertypes "github.com/fdurand/moby/api/types/container"
+	"github.com/fdurand/moby/api/types/network"
+	"github.com/fdurand/moby/api/types/versions"
+	"github.com/fdurand/moby/client"
+	"github.com/fdurand/moby/errdefs"
+	ctr "github.com/fdurand/moby/integration/internal/container"
+	"github.com/fdurand/moby/oci"
 	specs "github.com/opencontainers/image-spec/specs-go/v1"
 	"gotest.tools/v3/assert"
 	is "gotest.tools/v3/assert/cmp"
@@ -417,7 +417,7 @@ func TestCreateWithInvalidHealthcheckParams(t *testing.T) {
 }
 
 // Make sure that anonymous volumes can be overritten by tmpfs
-// https://github.com/moby/moby/issues/40446
+// https://github.com/fdurand/moby/issues/40446
 func TestCreateTmpfsOverrideAnonymousVolume(t *testing.T) {
 	skip.If(t, testEnv.DaemonInfo.OSType == "windows", "windows does not support tmpfs")
 	defer setupTest(t)()
@@ -510,7 +510,7 @@ func TestCreateVolumesFromNonExistingContainer(t *testing.T) {
 }
 
 // Test that we can create a container from an image that is for a different platform even if a platform was not specified
-// This is for the regression detailed here: https://github.com/moby/moby/issues/41552
+// This is for the regression detailed here: https://github.com/fdurand/moby/issues/41552
 func TestCreatePlatformSpecificImageNoPlatform(t *testing.T) {
 	defer setupTest(t)()
 

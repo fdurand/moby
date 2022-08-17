@@ -1,4 +1,4 @@
-package kernel // import "github.com/docker/docker/pkg/parsers/kernel"
+package kernel // import "github.com/fdurand/moby/pkg/parsers/kernel"
 
 import (
 	"fmt"

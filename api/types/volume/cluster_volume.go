@@ -1,7 +1,7 @@
 package volume
 
 import (
-	"github.com/docker/docker/api/types/swarm"
+	"github.com/fdurand/moby/api/types/swarm"
 )
 
 // ClusterVolume contains options and information specific to, and only present

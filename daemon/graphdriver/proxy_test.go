@@ -1,10 +1,10 @@
-package graphdriver // import "github.com/docker/docker/daemon/graphdriver"
+package graphdriver // import "github.com/fdurand/moby/daemon/graphdriver"
 
 import (
 	"encoding/json"
 	"testing"
 
-	"github.com/docker/docker/pkg/idtools"
+	"github.com/fdurand/moby/pkg/idtools"
 	"gotest.tools/v3/assert"
 )
 

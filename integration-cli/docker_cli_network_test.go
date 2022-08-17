@@ -4,7 +4,7 @@ import (
 	"net/http/httptest"
 	"testing"
 
-	"github.com/docker/docker/integration-cli/daemon"
+	"github.com/fdurand/moby/integration-cli/daemon"
 )
 
 type DockerCLINetworkSuite struct {

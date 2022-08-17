@@ -5,7 +5,7 @@ import (
 
 	"github.com/containerd/containerd/images"
 	"github.com/docker/distribution/reference"
-	"github.com/docker/docker/api/types"
+	"github.com/fdurand/moby/api/types"
 )
 
 // ImageDelete deletes the image referenced by the given imageRef from this
@@ -42,10 +42,10 @@ import (
 // meaning any delete conflicts will cause the image to not be deleted and the
 // conflict will not be reported.
 //
-// TODO(thaJeztah): implement ImageDelete "force" options; see https://github.com/moby/moby/issues/43850
-// TODO(thaJeztah): implement ImageDelete "prune" options; see https://github.com/moby/moby/issues/43849
-// TODO(thaJeztah): add support for image delete using image (short)ID; see https://github.com/moby/moby/issues/43854
-// TODO(thaJeztah): mage delete should send image "untag" events and prometheus counters; see https://github.com/moby/moby/issues/43855
+// TODO(thaJeztah): implement ImageDelete "force" options; see https://github.com/fdurand/moby/issues/43850
+// TODO(thaJeztah): implement ImageDelete "prune" options; see https://github.com/fdurand/moby/issues/43849
+// TODO(thaJeztah): add support for image delete using image (short)ID; see https://github.com/fdurand/moby/issues/43854
+// TODO(thaJeztah): mage delete should send image "untag" events and prometheus counters; see https://github.com/fdurand/moby/issues/43855
 func (i *ImageService) ImageDelete(ctx context.Context, imageRef string, force, prune bool) ([]types.ImageDeleteResponseItem, error) {
 	parsedRef, err := reference.ParseNormalizedNamed(imageRef)
 	if err != nil {

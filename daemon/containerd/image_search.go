@@ -3,8 +3,8 @@ package containerd
 import (
 	"context"
 
-	"github.com/docker/docker/api/types/filters"
-	"github.com/docker/docker/api/types/registry"
+	"github.com/fdurand/moby/api/types/filters"
+	"github.com/fdurand/moby/api/types/registry"
 )
 
 // SearchRegistryForImages queries the registry for images matching

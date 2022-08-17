@@ -5,10 +5,10 @@ import (
 	"os"
 	"testing"
 
-	"github.com/docker/docker/libnetwork/config"
-	"github.com/docker/docker/libnetwork/datastore"
-	"github.com/docker/docker/libnetwork/netlabel"
-	"github.com/docker/docker/libnetwork/options"
+	"github.com/fdurand/moby/libnetwork/config"
+	"github.com/fdurand/moby/libnetwork/datastore"
+	"github.com/fdurand/moby/libnetwork/netlabel"
+	"github.com/fdurand/moby/libnetwork/options"
 	"github.com/docker/libkv/store"
 )
 

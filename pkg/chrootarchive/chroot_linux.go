@@ -1,4 +1,4 @@
-package chrootarchive // import "github.com/docker/docker/pkg/chrootarchive"
+package chrootarchive // import "github.com/fdurand/moby/pkg/chrootarchive"
 
 import (
 	"fmt"

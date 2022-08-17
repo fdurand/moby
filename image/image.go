@@ -1,4 +1,4 @@
-package image // import "github.com/docker/docker/image"
+package image // import "github.com/fdurand/moby/image"
 
 import (
 	"encoding/json"
@@ -9,9 +9,9 @@ import (
 	"strings"
 	"time"
 
-	"github.com/docker/docker/api/types/container"
-	"github.com/docker/docker/dockerversion"
-	"github.com/docker/docker/layer"
+	"github.com/fdurand/moby/api/types/container"
+	"github.com/fdurand/moby/dockerversion"
+	"github.com/fdurand/moby/layer"
 	"github.com/opencontainers/go-digest"
 )
 

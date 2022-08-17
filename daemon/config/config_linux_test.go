@@ -1,10 +1,10 @@
-package config // import "github.com/docker/docker/daemon/config"
+package config // import "github.com/fdurand/moby/daemon/config"
 
 import (
 	"testing"
 
-	"github.com/docker/docker/api/types"
-	"github.com/docker/docker/opts"
+	"github.com/fdurand/moby/api/types"
+	"github.com/fdurand/moby/opts"
 	units "github.com/docker/go-units"
 	"github.com/spf13/pflag"
 	"gotest.tools/v3/assert"

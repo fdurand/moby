@@ -16,14 +16,14 @@ import (
 	"text/template"
 	"time"
 
-	"github.com/docker/docker/integration-cli/cli"
-	"github.com/docker/docker/integration-cli/cli/build"
-	"github.com/docker/docker/pkg/archive"
-	"github.com/docker/docker/pkg/system"
-	"github.com/docker/docker/testutil"
-	"github.com/docker/docker/testutil/fakecontext"
-	"github.com/docker/docker/testutil/fakegit"
-	"github.com/docker/docker/testutil/fakestorage"
+	"github.com/fdurand/moby/integration-cli/cli"
+	"github.com/fdurand/moby/integration-cli/cli/build"
+	"github.com/fdurand/moby/pkg/archive"
+	"github.com/fdurand/moby/pkg/system"
+	"github.com/fdurand/moby/testutil"
+	"github.com/fdurand/moby/testutil/fakecontext"
+	"github.com/fdurand/moby/testutil/fakegit"
+	"github.com/fdurand/moby/testutil/fakestorage"
 	"github.com/moby/buildkit/frontend/dockerfile/command"
 	"github.com/opencontainers/go-digest"
 	"gotest.tools/v3/assert"
@@ -450,7 +450,7 @@ ADD %s/file /`
 
 }
 
-// Regression for https://github.com/docker/docker/pull/27805
+// Regression for https://github.com/fdurand/moby/pull/27805
 // Makes sure that we don't use the cache if the contents of
 // a file in a subfolder of the context is modified and we re-build.
 func (s *DockerCLIBuildSuite) TestBuildModifyFileInFolder(c *testing.T) {
@@ -3607,7 +3607,7 @@ func (s *DockerCLIBuildSuite) TestBuildSymlinkBreakout(c *testing.T) {
 	tmpdir, err := os.MkdirTemp("", name)
 	assert.NilError(c, err)
 
-	// See https://github.com/moby/moby/pull/37770 for reason for next line.
+	// See https://github.com/fdurand/moby/pull/37770 for reason for next line.
 	tmpdir, err = system.GetLongPathName(tmpdir)
 	assert.NilError(c, err)
 
@@ -5978,7 +5978,7 @@ func (s *DockerCLIBuildSuite) TestBuildIntermediateTarget(c *testing.T) {
 
 // TestBuildOpaqueDirectory tests that a build succeeds which
 // creates opaque directories.
-// See https://github.com/docker/docker/issues/25244
+// See https://github.com/fdurand/moby/issues/25244
 func (s *DockerCLIBuildSuite) TestBuildOpaqueDirectory(c *testing.T) {
 	testRequires(c, DaemonIsLinux)
 	dockerFile := `

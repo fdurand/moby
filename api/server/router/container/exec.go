@@ -1,4 +1,4 @@
-package container // import "github.com/docker/docker/api/server/router/container"
+package container // import "github.com/fdurand/moby/api/server/router/container"
 
 import (
 	"context"
@@ -7,12 +7,12 @@ import (
 	"net/http"
 	"strconv"
 
-	"github.com/docker/docker/api/server/httputils"
-	"github.com/docker/docker/api/types"
-	"github.com/docker/docker/api/types/container"
-	"github.com/docker/docker/api/types/versions"
-	"github.com/docker/docker/errdefs"
-	"github.com/docker/docker/pkg/stdcopy"
+	"github.com/fdurand/moby/api/server/httputils"
+	"github.com/fdurand/moby/api/types"
+	"github.com/fdurand/moby/api/types/container"
+	"github.com/fdurand/moby/api/types/versions"
+	"github.com/fdurand/moby/errdefs"
+	"github.com/fdurand/moby/pkg/stdcopy"
 	"github.com/sirupsen/logrus"
 )
 

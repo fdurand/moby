@@ -1,4 +1,4 @@
-package reference // import "github.com/docker/docker/reference"
+package reference // import "github.com/fdurand/moby/reference"
 
 import (
 	"encoding/json"
@@ -9,7 +9,7 @@ import (
 	"sync"
 
 	"github.com/docker/distribution/reference"
-	"github.com/docker/docker/pkg/ioutils"
+	"github.com/fdurand/moby/pkg/ioutils"
 	"github.com/opencontainers/go-digest"
 	"github.com/pkg/errors"
 )

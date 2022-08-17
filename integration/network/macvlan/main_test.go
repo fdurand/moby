@@ -1,14 +1,14 @@
 //go:build !windows
 // +build !windows
 
-package macvlan // import "github.com/docker/docker/integration/network/macvlan"
+package macvlan // import "github.com/fdurand/moby/integration/network/macvlan"
 
 import (
 	"fmt"
 	"os"
 	"testing"
 
-	"github.com/docker/docker/testutil/environment"
+	"github.com/fdurand/moby/testutil/environment"
 )
 
 var testEnv *environment.Execution

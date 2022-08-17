@@ -1,9 +1,9 @@
-package daemon // import "github.com/docker/docker/daemon"
+package daemon // import "github.com/fdurand/moby/daemon"
 
 import (
 	"os"
 
-	"github.com/docker/docker/pkg/ioutils"
+	"github.com/fdurand/moby/pkg/ioutils"
 	"github.com/docker/libtrust"
 	"github.com/google/uuid"
 	"github.com/pkg/errors"

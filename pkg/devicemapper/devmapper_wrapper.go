@@ -1,7 +1,7 @@
 //go:build linux && cgo
 // +build linux,cgo
 
-package devicemapper // import "github.com/docker/docker/pkg/devicemapper"
+package devicemapper // import "github.com/fdurand/moby/pkg/devicemapper"
 
 /*
 #define _GNU_SOURCE

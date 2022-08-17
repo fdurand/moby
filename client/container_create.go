@@ -1,4 +1,4 @@
-package client // import "github.com/docker/docker/client"
+package client // import "github.com/fdurand/moby/client"
 
 import (
 	"context"
@@ -6,9 +6,9 @@ import (
 	"net/url"
 	"path"
 
-	"github.com/docker/docker/api/types/container"
-	"github.com/docker/docker/api/types/network"
-	"github.com/docker/docker/api/types/versions"
+	"github.com/fdurand/moby/api/types/container"
+	"github.com/fdurand/moby/api/types/network"
+	"github.com/fdurand/moby/api/types/versions"
 	specs "github.com/opencontainers/image-spec/specs-go/v1"
 )
 

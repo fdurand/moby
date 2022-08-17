@@ -1,4 +1,4 @@
-package build // import "github.com/docker/docker/api/server/backend/build"
+package build // import "github.com/fdurand/moby/api/server/backend/build"
 
 import (
 	"context"
@@ -6,14 +6,14 @@ import (
 	"strconv"
 
 	"github.com/docker/distribution/reference"
-	"github.com/docker/docker/api/types"
-	"github.com/docker/docker/api/types/backend"
-	"github.com/docker/docker/api/types/events"
-	"github.com/docker/docker/builder"
-	buildkit "github.com/docker/docker/builder/builder-next"
-	daemonevents "github.com/docker/docker/daemon/events"
-	"github.com/docker/docker/image"
-	"github.com/docker/docker/pkg/stringid"
+	"github.com/fdurand/moby/api/types"
+	"github.com/fdurand/moby/api/types/backend"
+	"github.com/fdurand/moby/api/types/events"
+	"github.com/fdurand/moby/builder"
+	buildkit "github.com/fdurand/moby/builder/builder-next"
+	daemonevents "github.com/fdurand/moby/daemon/events"
+	"github.com/fdurand/moby/image"
+	"github.com/fdurand/moby/pkg/stringid"
 	"github.com/pkg/errors"
 	"google.golang.org/grpc"
 )

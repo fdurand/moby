@@ -5,27 +5,27 @@ import (
 
 	"github.com/containerd/containerd"
 	"github.com/docker/distribution/reference"
-	"github.com/docker/docker/api/types"
-	"github.com/docker/docker/api/types/filters"
+	"github.com/fdurand/moby/api/types"
+	"github.com/fdurand/moby/api/types/filters"
 	"github.com/opencontainers/go-digest"
 	"github.com/opencontainers/image-spec/identity"
 )
 
 var acceptedImageFilterTags = map[string]bool{
-	"dangling":  false, // TODO(thaJeztah): implement "dangling" filter: see https://github.com/moby/moby/issues/43846
+	"dangling":  false, // TODO(thaJeztah): implement "dangling" filter: see https://github.com/fdurand/moby/issues/43846
 	"label":     true,
 	"before":    true,
 	"since":     true,
-	"reference": false, // TODO(thaJeztah): implement "reference" filter: see https://github.com/moby/moby/issues/43847
+	"reference": false, // TODO(thaJeztah): implement "reference" filter: see https://github.com/fdurand/moby/issues/43847
 }
 
 // Images returns a filtered list of images.
 //
-// TODO(thaJeztah): sort the results by created (descending); see https://github.com/moby/moby/issues/43848
-// TODO(thaJeztah): implement opts.ContainerCount (used for docker system df); see https://github.com/moby/moby/issues/43853
-// TODO(thaJeztah): add labels to results; see https://github.com/moby/moby/issues/43852
-// TODO(thaJeztah): verify behavior of `RepoDigests` and `RepoTags` for images without (untagged) or multiple tags; see https://github.com/moby/moby/issues/43861
-// TODO(thaJeztah): verify "Size" vs "VirtualSize" in images; see https://github.com/moby/moby/issues/43862
+// TODO(thaJeztah): sort the results by created (descending); see https://github.com/fdurand/moby/issues/43848
+// TODO(thaJeztah): implement opts.ContainerCount (used for docker system df); see https://github.com/fdurand/moby/issues/43853
+// TODO(thaJeztah): add labels to results; see https://github.com/fdurand/moby/issues/43852
+// TODO(thaJeztah): verify behavior of `RepoDigests` and `RepoTags` for images without (untagged) or multiple tags; see https://github.com/fdurand/moby/issues/43861
+// TODO(thaJeztah): verify "Size" vs "VirtualSize" in images; see https://github.com/fdurand/moby/issues/43862
 func (i *ImageService) Images(ctx context.Context, opts types.ImageListOptions) ([]*types.ImageSummary, error) {
 	if err := opts.Filters.Validate(acceptedImageFilterTags); err != nil {
 		return nil, err
@@ -125,7 +125,7 @@ type imageFilterFunc func(image containerd.Image) bool
 
 // setupFilters constructs an imageFilterFunc from the given imageFilters.
 //
-// TODO(thaJeztah): reimplement filters using containerd filters: see https://github.com/moby/moby/issues/43845
+// TODO(thaJeztah): reimplement filters using containerd filters: see https://github.com/fdurand/moby/issues/43845
 func (i *ImageService) setupFilters(ctx context.Context, imageFilters filters.Args) (imageFilterFunc, error) {
 	var fltrs []imageFilterFunc
 	err := imageFilters.WalkValues("before", func(value string) error {

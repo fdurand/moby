@@ -12,11 +12,11 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/docker/docker/api/types"
-	"github.com/docker/docker/testutil/fakecontext"
-	"github.com/docker/docker/testutil/fakegit"
-	"github.com/docker/docker/testutil/fakestorage"
-	"github.com/docker/docker/testutil/request"
+	"github.com/fdurand/moby/api/types"
+	"github.com/fdurand/moby/testutil/fakecontext"
+	"github.com/fdurand/moby/testutil/fakegit"
+	"github.com/fdurand/moby/testutil/fakestorage"
+	"github.com/fdurand/moby/testutil/request"
 	"gotest.tools/v3/assert"
 	is "gotest.tools/v3/assert/cmp"
 )
@@ -397,7 +397,7 @@ func (s *DockerAPISuite) TestBuildAddRemoteNoDecompress(c *testing.T) {
 }
 
 func (s *DockerAPISuite) TestBuildChownOnCopy(c *testing.T) {
-	// new feature added in 1.31 - https://github.com/moby/moby/pull/34263
+	// new feature added in 1.31 - https://github.com/fdurand/moby/pull/34263
 	testRequires(c, DaemonIsLinux, MinimumAPIVersion("1.31"))
 	dockerfile := `FROM busybox
 		RUN echo 'test1:x:1001:1001::/bin:/bin/false' >> /etc/passwd

@@ -10,8 +10,8 @@ import (
 	"sync"
 	"testing"
 
-	"github.com/docker/docker/api/types/versions"
-	"github.com/docker/docker/testutil/request"
+	"github.com/fdurand/moby/api/types/versions"
+	"github.com/fdurand/moby/testutil/request"
 	"github.com/pkg/errors"
 	"gotest.tools/v3/assert"
 )

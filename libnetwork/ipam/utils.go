@@ -4,8 +4,8 @@ import (
 	"fmt"
 	"net"
 
-	"github.com/docker/docker/libnetwork/ipamapi"
-	"github.com/docker/docker/libnetwork/types"
+	"github.com/fdurand/moby/libnetwork/ipamapi"
+	"github.com/fdurand/moby/libnetwork/types"
 )
 
 type ipVersion int

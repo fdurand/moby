@@ -1,4 +1,4 @@
-package graphdriver // import "github.com/docker/docker/daemon/graphdriver"
+package graphdriver // import "github.com/fdurand/moby/daemon/graphdriver"
 
 import (
 	"syscall"

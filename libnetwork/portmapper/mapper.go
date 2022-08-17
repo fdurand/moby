@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"net"
 
-	"github.com/docker/docker/libnetwork/portallocator"
+	"github.com/fdurand/moby/libnetwork/portallocator"
 	"github.com/ishidawataru/sctp"
 	"github.com/sirupsen/logrus"
 )

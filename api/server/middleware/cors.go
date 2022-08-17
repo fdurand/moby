@@ -1,10 +1,10 @@
-package middleware // import "github.com/docker/docker/api/server/middleware"
+package middleware // import "github.com/fdurand/moby/api/server/middleware"
 
 import (
 	"context"
 	"net/http"
 
-	"github.com/docker/docker/api/types/registry"
+	"github.com/fdurand/moby/api/types/registry"
 	"github.com/sirupsen/logrus"
 )
 

@@ -1,12 +1,12 @@
-package client // import "github.com/docker/docker/client"
+package client // import "github.com/fdurand/moby/client"
 
 import (
 	"context"
 	"net/url"
 	"strconv"
 
-	"github.com/docker/docker/api/types/container"
-	"github.com/docker/docker/api/types/versions"
+	"github.com/fdurand/moby/api/types/container"
+	"github.com/fdurand/moby/api/types/versions"
 )
 
 // ContainerRestart stops and starts a container again.

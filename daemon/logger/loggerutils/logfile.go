@@ -1,4 +1,4 @@
-package loggerutils // import "github.com/docker/docker/daemon/logger/loggerutils"
+package loggerutils // import "github.com/fdurand/moby/daemon/logger/loggerutils"
 
 import (
 	"compress/gzip"
@@ -13,8 +13,8 @@ import (
 	"sync"
 	"time"
 
-	"github.com/docker/docker/daemon/logger"
-	"github.com/docker/docker/pkg/pools"
+	"github.com/fdurand/moby/daemon/logger"
+	"github.com/fdurand/moby/pkg/pools"
 	"github.com/pkg/errors"
 	"github.com/sirupsen/logrus"
 )

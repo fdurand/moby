@@ -12,13 +12,13 @@ import (
 	"strconv"
 	"testing"
 
-	"github.com/docker/docker/libnetwork/driverapi"
-	"github.com/docker/docker/libnetwork/iptables"
-	"github.com/docker/docker/libnetwork/netlabel"
-	"github.com/docker/docker/libnetwork/netutils"
-	"github.com/docker/docker/libnetwork/options"
-	"github.com/docker/docker/libnetwork/testutils"
-	"github.com/docker/docker/libnetwork/types"
+	"github.com/fdurand/moby/libnetwork/driverapi"
+	"github.com/fdurand/moby/libnetwork/iptables"
+	"github.com/fdurand/moby/libnetwork/netlabel"
+	"github.com/fdurand/moby/libnetwork/netutils"
+	"github.com/fdurand/moby/libnetwork/options"
+	"github.com/fdurand/moby/libnetwork/testutils"
+	"github.com/fdurand/moby/libnetwork/types"
 	"github.com/vishvananda/netlink"
 )
 

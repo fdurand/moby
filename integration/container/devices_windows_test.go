@@ -1,4 +1,4 @@
-package container // import "github.com/docker/docker/integration/container"
+package container // import "github.com/fdurand/moby/integration/container"
 
 import (
 	"context"
@@ -6,9 +6,9 @@ import (
 	"testing"
 	"time"
 
-	"github.com/docker/docker/api/types"
-	containertypes "github.com/docker/docker/api/types/container"
-	"github.com/docker/docker/integration/internal/container"
+	"github.com/fdurand/moby/api/types"
+	containertypes "github.com/fdurand/moby/api/types/container"
+	"github.com/fdurand/moby/integration/internal/container"
 	"gotest.tools/v3/assert"
 	"gotest.tools/v3/poll"
 	"gotest.tools/v3/skip"
@@ -98,7 +98,7 @@ func TestWindowsDevices(t *testing.T) {
 			id := container.Create(ctx, t, client, deviceOptions...)
 
 			// Hyper-V isolation is failing even with no actual devices added.
-			// TODO: Once https://github.com/moby/moby/issues/43395 is resolved,
+			// TODO: Once https://github.com/fdurand/moby/issues/43395 is resolved,
 			// remove this skip.If and validate the expected behaviour under Hyper-V.
 			skip.If(t, d.isolation == containertypes.IsolationHyperV && !d.expectedStartFailure, "FIXME. HyperV isolation setup is probably incorrect in the test")
 

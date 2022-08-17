@@ -1,11 +1,11 @@
-package swarm // import "github.com/docker/docker/api/server/router/swarm"
+package swarm // import "github.com/fdurand/moby/api/server/router/swarm"
 
 import (
 	"context"
 
-	basictypes "github.com/docker/docker/api/types"
-	"github.com/docker/docker/api/types/backend"
-	types "github.com/docker/docker/api/types/swarm"
+	basictypes "github.com/fdurand/moby/api/types"
+	"github.com/fdurand/moby/api/types/backend"
+	types "github.com/fdurand/moby/api/types/swarm"
 )
 
 // Backend abstracts a swarm manager.

@@ -1,10 +1,10 @@
-package client // import "github.com/docker/docker/client"
+package client // import "github.com/fdurand/moby/client"
 
 import (
 	"context"
 	"net/url"
 
-	"github.com/docker/docker/api/types/versions"
+	"github.com/fdurand/moby/api/types/versions"
 )
 
 // VolumeRemove removes a volume from the docker host.

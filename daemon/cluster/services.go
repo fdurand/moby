@@ -1,4 +1,4 @@
-package cluster // import "github.com/docker/docker/daemon/cluster"
+package cluster // import "github.com/fdurand/moby/daemon/cluster"
 
 import (
 	"context"
@@ -12,14 +12,14 @@ import (
 	"time"
 
 	"github.com/docker/distribution/reference"
-	"github.com/docker/docker/api/types"
-	"github.com/docker/docker/api/types/backend"
-	"github.com/docker/docker/api/types/registry"
-	"github.com/docker/docker/api/types/swarm"
-	timetypes "github.com/docker/docker/api/types/time"
-	"github.com/docker/docker/daemon/cluster/convert"
-	"github.com/docker/docker/errdefs"
-	runconfigopts "github.com/docker/docker/runconfig/opts"
+	"github.com/fdurand/moby/api/types"
+	"github.com/fdurand/moby/api/types/backend"
+	"github.com/fdurand/moby/api/types/registry"
+	"github.com/fdurand/moby/api/types/swarm"
+	timetypes "github.com/fdurand/moby/api/types/time"
+	"github.com/fdurand/moby/daemon/cluster/convert"
+	"github.com/fdurand/moby/errdefs"
+	runconfigopts "github.com/fdurand/moby/runconfig/opts"
 	gogotypes "github.com/gogo/protobuf/types"
 	swarmapi "github.com/moby/swarmkit/v2/api"
 	"github.com/pkg/errors"

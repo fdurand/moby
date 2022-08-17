@@ -8,7 +8,7 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/docker/docker/testutil"
+	"github.com/fdurand/moby/testutil"
 	"github.com/pkg/errors"
 	"gotest.tools/v3/icmd"
 )

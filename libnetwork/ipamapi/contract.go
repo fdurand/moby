@@ -4,9 +4,9 @@ package ipamapi
 import (
 	"net"
 
-	"github.com/docker/docker/libnetwork/discoverapi"
-	"github.com/docker/docker/libnetwork/types"
-	"github.com/docker/docker/pkg/plugingetter"
+	"github.com/fdurand/moby/libnetwork/discoverapi"
+	"github.com/fdurand/moby/libnetwork/types"
+	"github.com/fdurand/moby/pkg/plugingetter"
 )
 
 // IPAM plugin types

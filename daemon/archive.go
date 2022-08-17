@@ -1,17 +1,17 @@
-package daemon // import "github.com/docker/docker/daemon"
+package daemon // import "github.com/fdurand/moby/daemon"
 
 import (
 	"io"
 	"os"
 	"strings"
 
-	"github.com/docker/docker/api/types"
-	"github.com/docker/docker/container"
-	"github.com/docker/docker/errdefs"
-	"github.com/docker/docker/pkg/archive"
-	"github.com/docker/docker/pkg/chrootarchive"
-	"github.com/docker/docker/pkg/ioutils"
-	"github.com/docker/docker/pkg/system"
+	"github.com/fdurand/moby/api/types"
+	"github.com/fdurand/moby/container"
+	"github.com/fdurand/moby/errdefs"
+	"github.com/fdurand/moby/pkg/archive"
+	"github.com/fdurand/moby/pkg/chrootarchive"
+	"github.com/fdurand/moby/pkg/ioutils"
+	"github.com/fdurand/moby/pkg/system"
 	"github.com/pkg/errors"
 )
 

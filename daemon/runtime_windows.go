@@ -1,7 +1,7 @@
 package daemon
 
 import (
-	"github.com/docker/docker/api/types"
+	"github.com/fdurand/moby/api/types"
 	"github.com/pkg/errors"
 )
 

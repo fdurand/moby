@@ -1,15 +1,15 @@
-package container // import "github.com/docker/docker/api/server/router/container"
+package container // import "github.com/fdurand/moby/api/server/router/container"
 
 import (
 	"context"
 	"io"
 
-	"github.com/docker/docker/api/types"
-	"github.com/docker/docker/api/types/backend"
-	"github.com/docker/docker/api/types/container"
-	"github.com/docker/docker/api/types/filters"
-	containerpkg "github.com/docker/docker/container"
-	"github.com/docker/docker/pkg/archive"
+	"github.com/fdurand/moby/api/types"
+	"github.com/fdurand/moby/api/types/backend"
+	"github.com/fdurand/moby/api/types/container"
+	"github.com/fdurand/moby/api/types/filters"
+	containerpkg "github.com/fdurand/moby/container"
+	"github.com/fdurand/moby/pkg/archive"
 )
 
 // execBackend includes functions to implement to provide exec functionality.

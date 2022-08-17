@@ -6,14 +6,14 @@ package ipvlan
 import (
 	"fmt"
 
-	"github.com/docker/docker/libnetwork/driverapi"
-	"github.com/docker/docker/libnetwork/netlabel"
-	"github.com/docker/docker/libnetwork/ns"
-	"github.com/docker/docker/libnetwork/options"
-	"github.com/docker/docker/libnetwork/osl"
-	"github.com/docker/docker/libnetwork/types"
-	"github.com/docker/docker/pkg/parsers/kernel"
-	"github.com/docker/docker/pkg/stringid"
+	"github.com/fdurand/moby/libnetwork/driverapi"
+	"github.com/fdurand/moby/libnetwork/netlabel"
+	"github.com/fdurand/moby/libnetwork/ns"
+	"github.com/fdurand/moby/libnetwork/options"
+	"github.com/fdurand/moby/libnetwork/osl"
+	"github.com/fdurand/moby/libnetwork/types"
+	"github.com/fdurand/moby/pkg/parsers/kernel"
+	"github.com/fdurand/moby/pkg/stringid"
 	"github.com/sirupsen/logrus"
 )
 

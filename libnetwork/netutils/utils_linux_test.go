@@ -6,9 +6,9 @@ import (
 	"sort"
 	"testing"
 
-	"github.com/docker/docker/libnetwork/ipamutils"
-	"github.com/docker/docker/libnetwork/testutils"
-	"github.com/docker/docker/libnetwork/types"
+	"github.com/fdurand/moby/libnetwork/ipamutils"
+	"github.com/fdurand/moby/libnetwork/testutils"
+	"github.com/fdurand/moby/libnetwork/types"
 	"github.com/vishvananda/netlink"
 )
 

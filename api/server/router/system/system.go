@@ -1,8 +1,8 @@
-package system // import "github.com/docker/docker/api/server/router/system"
+package system // import "github.com/fdurand/moby/api/server/router/system"
 
 import (
-	"github.com/docker/docker/api/server/router"
-	buildkit "github.com/docker/docker/builder/builder-next"
+	"github.com/fdurand/moby/api/server/router"
+	buildkit "github.com/fdurand/moby/builder/builder-next"
 )
 
 // systemRouter provides information about the Docker system overall.

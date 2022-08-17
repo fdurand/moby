@@ -1,4 +1,4 @@
-package container // import "github.com/docker/docker/integration/container"
+package container // import "github.com/fdurand/moby/integration/container"
 
 import (
 	"bytes"
@@ -11,14 +11,14 @@ import (
 	"testing"
 	"time"
 
-	"github.com/docker/docker/api/types"
-	containertypes "github.com/docker/docker/api/types/container"
-	"github.com/docker/docker/api/types/versions"
-	"github.com/docker/docker/integration/internal/container"
-	net "github.com/docker/docker/integration/internal/network"
-	"github.com/docker/docker/pkg/stdcopy"
-	"github.com/docker/docker/pkg/system"
-	"github.com/docker/docker/testutil/daemon"
+	"github.com/fdurand/moby/api/types"
+	containertypes "github.com/fdurand/moby/api/types/container"
+	"github.com/fdurand/moby/api/types/versions"
+	"github.com/fdurand/moby/integration/internal/container"
+	net "github.com/fdurand/moby/integration/internal/network"
+	"github.com/fdurand/moby/pkg/stdcopy"
+	"github.com/fdurand/moby/pkg/system"
+	"github.com/fdurand/moby/testutil/daemon"
 	"golang.org/x/sys/unix"
 	"gotest.tools/v3/assert"
 	is "gotest.tools/v3/assert/cmp"
@@ -36,7 +36,7 @@ func TestNISDomainname(t *testing.T) {
 	// Rootless supports custom Hostname but doesn't support custom Domainname
 	//  OCI runtime create failed: container_linux.go:349: starting container process caused "process_linux.go:449: container init caused \
 	//  "write sysctl key kernel.domainname: open /proc/sys/kernel/domainname: permission denied\"": unknown.
-	skip.If(t, testEnv.IsRootless, "rootless mode doesn't support setting Domainname (TODO: https://github.com/moby/moby/issues/40632)")
+	skip.If(t, testEnv.IsRootless, "rootless mode doesn't support setting Domainname (TODO: https://github.com/fdurand/moby/issues/40632)")
 
 	defer setupTest(t)()
 	client := testEnv.APIClient()

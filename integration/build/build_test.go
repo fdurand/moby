@@ -1,4 +1,4 @@
-package build // import "github.com/docker/docker/integration/build"
+package build // import "github.com/fdurand/moby/integration/build"
 
 import (
 	"archive/tar"
@@ -10,12 +10,12 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/docker/docker/api/types"
-	"github.com/docker/docker/api/types/filters"
-	"github.com/docker/docker/api/types/versions"
-	"github.com/docker/docker/errdefs"
-	"github.com/docker/docker/pkg/jsonmessage"
-	"github.com/docker/docker/testutil/fakecontext"
+	"github.com/fdurand/moby/api/types"
+	"github.com/fdurand/moby/api/types/filters"
+	"github.com/fdurand/moby/api/types/versions"
+	"github.com/fdurand/moby/errdefs"
+	"github.com/fdurand/moby/pkg/jsonmessage"
+	"github.com/fdurand/moby/testutil/fakecontext"
 	"gotest.tools/v3/assert"
 	is "gotest.tools/v3/assert/cmp"
 	"gotest.tools/v3/skip"
@@ -524,7 +524,7 @@ RUN for g in $(seq 0 8); do dd if=/dev/urandom of=rnd bs=1K count=1 seek=$((1024
 }
 
 func TestBuildWCOWSandboxSize(t *testing.T) {
-	t.Skip("FLAKY_TEST that needs to be fixed; see https://github.com/moby/moby/issues/42743")
+	t.Skip("FLAKY_TEST that needs to be fixed; see https://github.com/fdurand/moby/issues/42743")
 	skip.If(t, testEnv.DaemonInfo.OSType != "windows", "only Windows has sandbox size control")
 	ctx := context.TODO()
 	defer setupTest(t)()
@@ -566,7 +566,7 @@ COPY --from=intermediate C:\\stuff C:\\stuff
 	// - The "COPY --from=intermediate" step ran out of space during re-exec'd writing of the transport layer information to hcsshim's temp directory
 	// The latter case means we finished the COPY operation, so the sandbox must have been larger than 20GB, which was the test,
 	// and _then_ ran out of space on the host during `importLayer` in the WindowsFilter graph driver, while committing the layer.
-	// See https://github.com/moby/moby/pull/41636#issuecomment-723038517 for more details on the operations being done here.
+	// See https://github.com/fdurand/moby/pull/41636#issuecomment-723038517 for more details on the operations being done here.
 	// Specifically, this happens on the Docker Jenkins CI Windows-RS5 build nodes.
 	// The two parts of the acceptable-failure case are on different lines, so we need two regexp checks.
 	assert.Check(t, is.Regexp("Successfully built|COPY --from=intermediate", out.String()))

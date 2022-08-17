@@ -1,4 +1,4 @@
-package distribution // import "github.com/docker/docker/distribution"
+package distribution // import "github.com/fdurand/moby/distribution"
 
 import (
 	"context"
@@ -9,8 +9,8 @@ import (
 	"testing"
 
 	"github.com/docker/distribution/reference"
-	"github.com/docker/docker/api/types/registry"
-	registrypkg "github.com/docker/docker/registry"
+	"github.com/fdurand/moby/api/types/registry"
+	registrypkg "github.com/fdurand/moby/registry"
 	"github.com/sirupsen/logrus"
 )
 

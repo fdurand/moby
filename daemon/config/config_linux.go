@@ -1,4 +1,4 @@
-package config // import "github.com/docker/docker/daemon/config"
+package config // import "github.com/fdurand/moby/daemon/config"
 
 import (
 	"fmt"
@@ -7,11 +7,11 @@ import (
 	"path/filepath"
 
 	"github.com/containerd/cgroups"
-	"github.com/docker/docker/api/types"
-	"github.com/docker/docker/api/types/container"
-	"github.com/docker/docker/opts"
-	"github.com/docker/docker/pkg/homedir"
-	"github.com/docker/docker/rootless"
+	"github.com/fdurand/moby/api/types"
+	"github.com/fdurand/moby/api/types/container"
+	"github.com/fdurand/moby/opts"
+	"github.com/fdurand/moby/pkg/homedir"
+	"github.com/fdurand/moby/rootless"
 	units "github.com/docker/go-units"
 	"github.com/pkg/errors"
 )

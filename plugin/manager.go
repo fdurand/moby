@@ -1,4 +1,4 @@
-package plugin // import "github.com/docker/docker/plugin"
+package plugin // import "github.com/fdurand/moby/plugin"
 
 import (
 	"context"
@@ -15,13 +15,13 @@ import (
 
 	"github.com/containerd/containerd/content"
 	"github.com/containerd/containerd/content/local"
-	"github.com/docker/docker/api/types"
-	"github.com/docker/docker/pkg/authorization"
-	"github.com/docker/docker/pkg/containerfs"
-	"github.com/docker/docker/pkg/ioutils"
-	"github.com/docker/docker/pkg/pubsub"
-	v2 "github.com/docker/docker/plugin/v2"
-	"github.com/docker/docker/registry"
+	"github.com/fdurand/moby/api/types"
+	"github.com/fdurand/moby/pkg/authorization"
+	"github.com/fdurand/moby/pkg/containerfs"
+	"github.com/fdurand/moby/pkg/ioutils"
+	"github.com/fdurand/moby/pkg/pubsub"
+	v2 "github.com/fdurand/moby/plugin/v2"
+	"github.com/fdurand/moby/registry"
 	"github.com/opencontainers/go-digest"
 	specs "github.com/opencontainers/runtime-spec/specs-go"
 	"github.com/pkg/errors"

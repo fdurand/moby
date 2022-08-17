@@ -1,16 +1,16 @@
-package daemon // import "github.com/docker/docker/daemon"
+package daemon // import "github.com/fdurand/moby/daemon"
 
 import (
 	"os"
 	"path/filepath"
 	"testing"
 
-	containertypes "github.com/docker/docker/api/types/container"
-	"github.com/docker/docker/container"
-	"github.com/docker/docker/daemon/config"
-	"github.com/docker/docker/daemon/network"
-	"github.com/docker/docker/libnetwork"
-	"github.com/docker/docker/pkg/containerfs"
+	containertypes "github.com/fdurand/moby/api/types/container"
+	"github.com/fdurand/moby/container"
+	"github.com/fdurand/moby/daemon/config"
+	"github.com/fdurand/moby/daemon/network"
+	"github.com/fdurand/moby/libnetwork"
+	"github.com/fdurand/moby/pkg/containerfs"
 	"gotest.tools/v3/assert"
 	is "gotest.tools/v3/assert/cmp"
 	"gotest.tools/v3/skip"
@@ -58,7 +58,7 @@ func cleanupFakeContainer(c *container.Container) {
 // TestTmpfsDevShmNoDupMount checks that a user-specified /dev/shm tmpfs
 // mount (as in "docker run --tmpfs /dev/shm:rw,size=NNN") does not result
 // in "Duplicate mount point" error from the engine.
-// https://github.com/moby/moby/issues/35455
+// https://github.com/fdurand/moby/issues/35455
 func TestTmpfsDevShmNoDupMount(t *testing.T) {
 	skip.If(t, os.Getuid() != 0, "skipping test that requires root")
 	c := &container.Container{
@@ -81,7 +81,7 @@ func TestTmpfsDevShmNoDupMount(t *testing.T) {
 // TestIpcPrivateVsReadonly checks that in case of IpcMode: private
 // and ReadonlyRootfs: true (as in "docker run --ipc private --read-only")
 // the resulting /dev/shm mount is NOT made read-only.
-// https://github.com/moby/moby/issues/36503
+// https://github.com/fdurand/moby/issues/36503
 func TestIpcPrivateVsReadonly(t *testing.T) {
 	skip.If(t, os.Getuid() != 0, "skipping test that requires root")
 	c := &container.Container{

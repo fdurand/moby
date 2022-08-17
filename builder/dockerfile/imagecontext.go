@@ -1,13 +1,13 @@
-package dockerfile // import "github.com/docker/docker/builder/dockerfile"
+package dockerfile // import "github.com/fdurand/moby/builder/dockerfile"
 
 import (
 	"context"
 	"runtime"
 
 	"github.com/containerd/containerd/platforms"
-	"github.com/docker/docker/api/types/backend"
-	"github.com/docker/docker/builder"
-	dockerimage "github.com/docker/docker/image"
+	"github.com/fdurand/moby/api/types/backend"
+	"github.com/fdurand/moby/builder"
+	dockerimage "github.com/fdurand/moby/image"
 	specs "github.com/opencontainers/image-spec/specs-go/v1"
 	"github.com/pkg/errors"
 	"github.com/sirupsen/logrus"

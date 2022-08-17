@@ -1,4 +1,4 @@
-package loggerutils // import "github.com/docker/docker/daemon/logger/loggerutils"
+package loggerutils // import "github.com/fdurand/moby/daemon/logger/loggerutils"
 
 import (
 	"io"

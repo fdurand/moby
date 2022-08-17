@@ -1,4 +1,4 @@
-package remotecontext // import "github.com/docker/docker/builder/remotecontext"
+package remotecontext // import "github.com/fdurand/moby/builder/remotecontext"
 
 import (
 	"bufio"
@@ -9,11 +9,11 @@ import (
 	"strings"
 
 	"github.com/containerd/continuity/driver"
-	"github.com/docker/docker/api/types/backend"
-	"github.com/docker/docker/builder"
-	"github.com/docker/docker/builder/remotecontext/urlutil"
-	"github.com/docker/docker/errdefs"
-	"github.com/docker/docker/pkg/fileutils"
+	"github.com/fdurand/moby/api/types/backend"
+	"github.com/fdurand/moby/builder"
+	"github.com/fdurand/moby/builder/remotecontext/urlutil"
+	"github.com/fdurand/moby/errdefs"
+	"github.com/fdurand/moby/pkg/fileutils"
 	"github.com/moby/buildkit/frontend/dockerfile/dockerignore"
 	"github.com/moby/buildkit/frontend/dockerfile/parser"
 	"github.com/pkg/errors"

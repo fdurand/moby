@@ -1,14 +1,14 @@
 //go:build !windows
 // +build !windows
 
-package runconfig // import "github.com/docker/docker/runconfig"
+package runconfig // import "github.com/fdurand/moby/runconfig"
 
 import (
 	"fmt"
 	"runtime"
 
-	"github.com/docker/docker/api/types/container"
-	"github.com/docker/docker/pkg/sysinfo"
+	"github.com/fdurand/moby/api/types/container"
+	"github.com/fdurand/moby/pkg/sysinfo"
 )
 
 // DefaultDaemonNetworkMode returns the default network stack the daemon should

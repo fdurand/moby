@@ -8,7 +8,7 @@ import (
 	"google.golang.org/grpc"
 
 	"github.com/container-storage-interface/spec/lib/go/csi"
-	"github.com/docker/docker/pkg/plugingetter"
+	"github.com/fdurand/moby/pkg/plugingetter"
 	"github.com/moby/swarmkit/v2/api"
 )
 

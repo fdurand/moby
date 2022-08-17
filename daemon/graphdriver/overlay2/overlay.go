@@ -1,7 +1,7 @@
 //go:build linux
 // +build linux
 
-package overlay2 // import "github.com/docker/docker/daemon/graphdriver/overlay2"
+package overlay2 // import "github.com/fdurand/moby/daemon/graphdriver/overlay2"
 
 import (
 	"context"
@@ -15,16 +15,16 @@ import (
 	"strings"
 	"sync"
 
-	"github.com/docker/docker/daemon/graphdriver"
-	"github.com/docker/docker/daemon/graphdriver/overlayutils"
-	"github.com/docker/docker/pkg/archive"
-	"github.com/docker/docker/pkg/chrootarchive"
-	"github.com/docker/docker/pkg/containerfs"
-	"github.com/docker/docker/pkg/directory"
-	"github.com/docker/docker/pkg/fsutils"
-	"github.com/docker/docker/pkg/idtools"
-	"github.com/docker/docker/pkg/parsers"
-	"github.com/docker/docker/quota"
+	"github.com/fdurand/moby/daemon/graphdriver"
+	"github.com/fdurand/moby/daemon/graphdriver/overlayutils"
+	"github.com/fdurand/moby/pkg/archive"
+	"github.com/fdurand/moby/pkg/chrootarchive"
+	"github.com/fdurand/moby/pkg/containerfs"
+	"github.com/fdurand/moby/pkg/directory"
+	"github.com/fdurand/moby/pkg/fsutils"
+	"github.com/fdurand/moby/pkg/idtools"
+	"github.com/fdurand/moby/pkg/parsers"
+	"github.com/fdurand/moby/quota"
 	units "github.com/docker/go-units"
 	"github.com/moby/locker"
 	"github.com/moby/sys/mount"

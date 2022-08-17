@@ -1,10 +1,10 @@
-package config // import "github.com/docker/docker/daemon/config"
+package config // import "github.com/fdurand/moby/daemon/config"
 
 import (
 	"os"
 	"path/filepath"
 
-	"github.com/docker/docker/api/types"
+	"github.com/fdurand/moby/api/types"
 )
 
 const (

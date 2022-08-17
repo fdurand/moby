@@ -7,10 +7,10 @@ import (
 	"testing"
 
 	"github.com/containerd/containerd/pkg/apparmor"
-	containertypes "github.com/docker/docker/api/types/container"
-	"github.com/docker/docker/container"
-	"github.com/docker/docker/daemon/config"
-	"github.com/docker/docker/daemon/exec"
+	containertypes "github.com/fdurand/moby/api/types/container"
+	"github.com/fdurand/moby/container"
+	"github.com/fdurand/moby/daemon/config"
+	"github.com/fdurand/moby/daemon/exec"
 	specs "github.com/opencontainers/runtime-spec/specs-go"
 	"gotest.tools/v3/assert"
 )
@@ -46,7 +46,7 @@ func TestExecSetPlatformOptAppArmor(t *testing.T) {
 			// FIXME: execSetPlatformOpts prefers custom profiles over "privileged",
 			//        which looks like a bug (--privileged on the container should
 			//        disable apparmor, seccomp, and selinux); see the code at:
-			//        https://github.com/moby/moby/blob/46cdcd206c56172b95ba5c77b827a722dab426c5/daemon/exec_linux.go#L32-L40
+			//        https://github.com/fdurand/moby/blob/46cdcd206c56172b95ba5c77b827a722dab426c5/daemon/exec_linux.go#L32-L40
 			// expectedProfile: unconfinedAppArmorProfile,
 		},
 	}
@@ -55,7 +55,7 @@ func TestExecSetPlatformOptAppArmor(t *testing.T) {
 
 	// Currently, `docker exec --privileged` inherits the Privileged configuration
 	// of the container, and does not disable AppArmor.
-	// See https://github.com/moby/moby/pull/31773#discussion_r105586900
+	// See https://github.com/fdurand/moby/pull/31773#discussion_r105586900
 	//
 	// This behavior may change in future, but to verify the current behavior,
 	// we run the test both with "exec" and "exec --privileged", which should

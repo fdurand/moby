@@ -1,9 +1,9 @@
-package client // import "github.com/docker/docker/client"
+package client // import "github.com/fdurand/moby/client"
 
 import (
 	"context"
 
-	"github.com/docker/docker/api/types/swarm"
+	"github.com/fdurand/moby/api/types/swarm"
 )
 
 // SwarmJoin joins the swarm.

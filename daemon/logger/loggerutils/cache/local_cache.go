@@ -1,11 +1,11 @@
-package cache // import "github.com/docker/docker/daemon/logger/loggerutils/cache"
+package cache // import "github.com/fdurand/moby/daemon/logger/loggerutils/cache"
 
 import (
 	"strconv"
 
-	"github.com/docker/docker/api/types/container"
-	"github.com/docker/docker/daemon/logger"
-	"github.com/docker/docker/daemon/logger/local"
+	"github.com/fdurand/moby/api/types/container"
+	"github.com/fdurand/moby/daemon/logger"
+	"github.com/fdurand/moby/daemon/logger/local"
 	units "github.com/docker/go-units"
 	"github.com/pkg/errors"
 	"github.com/sirupsen/logrus"

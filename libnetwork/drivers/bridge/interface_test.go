@@ -6,7 +6,7 @@ package bridge
 import (
 	"testing"
 
-	"github.com/docker/docker/libnetwork/testutils"
+	"github.com/fdurand/moby/libnetwork/testutils"
 	"github.com/vishvananda/netlink"
 )
 

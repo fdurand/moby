@@ -1,4 +1,4 @@
-package local // import "github.com/docker/docker/libcontainerd/local"
+package local // import "github.com/fdurand/moby/libcontainerd/local"
 
 import "strings"
 

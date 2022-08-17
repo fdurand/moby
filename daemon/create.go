@@ -1,4 +1,4 @@
-package daemon // import "github.com/docker/docker/daemon"
+package daemon // import "github.com/fdurand/moby/daemon"
 
 import (
 	"fmt"
@@ -8,16 +8,16 @@ import (
 	"time"
 
 	"github.com/containerd/containerd/platforms"
-	"github.com/docker/docker/api/types"
-	containertypes "github.com/docker/docker/api/types/container"
-	networktypes "github.com/docker/docker/api/types/network"
-	"github.com/docker/docker/container"
-	"github.com/docker/docker/daemon/images"
-	"github.com/docker/docker/errdefs"
-	"github.com/docker/docker/image"
-	"github.com/docker/docker/pkg/idtools"
-	"github.com/docker/docker/pkg/system"
-	"github.com/docker/docker/runconfig"
+	"github.com/fdurand/moby/api/types"
+	containertypes "github.com/fdurand/moby/api/types/container"
+	networktypes "github.com/fdurand/moby/api/types/network"
+	"github.com/fdurand/moby/container"
+	"github.com/fdurand/moby/daemon/images"
+	"github.com/fdurand/moby/errdefs"
+	"github.com/fdurand/moby/image"
+	"github.com/fdurand/moby/pkg/idtools"
+	"github.com/fdurand/moby/pkg/system"
+	"github.com/fdurand/moby/runconfig"
 	v1 "github.com/opencontainers/image-spec/specs-go/v1"
 	"github.com/opencontainers/selinux/go-selinux"
 	"github.com/pkg/errors"
@@ -102,7 +102,7 @@ func (daemon *Daemon) containerCreate(opts createOpts) (containertypes.CreateRes
 	containerActions.WithValues("create").UpdateSince(start)
 
 	if warnings == nil {
-		warnings = make([]string, 0) // Create an empty slice to avoid https://github.com/moby/moby/issues/38222
+		warnings = make([]string, 0) // Create an empty slice to avoid https://github.com/fdurand/moby/issues/38222
 	}
 
 	return containertypes.CreateResponse{ID: ctr.ID, Warnings: warnings}, nil

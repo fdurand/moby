@@ -13,12 +13,12 @@ import (
 	"testing"
 	"time"
 
-	"github.com/docker/docker/api/types"
-	volumetypes "github.com/docker/docker/api/types/volume"
-	"github.com/docker/docker/integration-cli/daemon"
-	"github.com/docker/docker/pkg/stringid"
-	testdaemon "github.com/docker/docker/testutil/daemon"
-	"github.com/docker/docker/volume"
+	"github.com/fdurand/moby/api/types"
+	volumetypes "github.com/fdurand/moby/api/types/volume"
+	"github.com/fdurand/moby/integration-cli/daemon"
+	"github.com/fdurand/moby/pkg/stringid"
+	testdaemon "github.com/fdurand/moby/testutil/daemon"
+	"github.com/fdurand/moby/volume"
 	"gotest.tools/v3/assert"
 )
 

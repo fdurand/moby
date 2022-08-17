@@ -9,11 +9,11 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/docker/docker/api/types"
-	"github.com/docker/docker/api/types/filters"
-	"github.com/docker/docker/api/types/network"
-	"github.com/docker/docker/api/types/versions"
-	"github.com/docker/docker/testutil/request"
+	"github.com/fdurand/moby/api/types"
+	"github.com/fdurand/moby/api/types/filters"
+	"github.com/fdurand/moby/api/types/network"
+	"github.com/fdurand/moby/api/types/versions"
+	"github.com/fdurand/moby/testutil/request"
 	"gotest.tools/v3/assert"
 )
 
@@ -53,7 +53,7 @@ func (s *DockerAPISuite) TestAPINetworkCreateCheckDuplicate(c *testing.T) {
 		// In the early test code it uses bool value to represent
 		// whether createNetwork() is expected to fail or not.
 		// Therefore, we use negation to handle the same logic after
-		// the code was changed in https://github.com/moby/moby/pull/35030
+		// the code was changed in https://github.com/fdurand/moby/pull/35030
 		// -http.StatusCreated will also be checked as NOT equal to
 		// http.StatusCreated in createNetwork() function.
 		expectedStatus = -http.StatusCreated
@@ -258,7 +258,7 @@ func createDeletePredefinedNetwork(c *testing.T, name string) {
 		// In the early test code it uses bool value to represent
 		// whether createNetwork() is expected to fail or not.
 		// Therefore, we use negation to handle the same logic after
-		// the code was changed in https://github.com/moby/moby/pull/35030
+		// the code was changed in https://github.com/fdurand/moby/pull/35030
 		// -http.StatusCreated will also be checked as NOT equal to
 		// http.StatusCreated in createNetwork() function.
 		expectedStatus = -http.StatusCreated

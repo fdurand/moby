@@ -7,7 +7,7 @@ import (
 
 	"github.com/sirupsen/logrus"
 
-	"github.com/docker/docker/pkg/plugingetter"
+	"github.com/fdurand/moby/pkg/plugingetter"
 
 	"github.com/moby/swarmkit/v2/agent/csi/plugin"
 	"github.com/moby/swarmkit/v2/agent/exec"

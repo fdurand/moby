@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"net"
 
-	"github.com/docker/docker/libnetwork/types"
+	"github.com/fdurand/moby/libnetwork/types"
 	"github.com/vishvananda/netlink"
 )
 

@@ -1,4 +1,4 @@
-package layer // import "github.com/docker/docker/layer"
+package layer // import "github.com/fdurand/moby/layer"
 
 import (
 	"io"
@@ -7,8 +7,8 @@ import (
 	"testing"
 
 	"github.com/containerd/continuity/driver"
-	"github.com/docker/docker/pkg/archive"
-	"github.com/docker/docker/pkg/containerfs"
+	"github.com/fdurand/moby/pkg/archive"
+	"github.com/fdurand/moby/pkg/containerfs"
 )
 
 func TestMountInit(t *testing.T) {

@@ -1,14 +1,14 @@
-package stats // import "github.com/docker/docker/daemon/stats"
+package stats // import "github.com/fdurand/moby/daemon/stats"
 
 import (
 	"bufio"
 	"sync"
 	"time"
 
-	"github.com/docker/docker/api/types"
-	"github.com/docker/docker/container"
-	"github.com/docker/docker/errdefs"
-	"github.com/docker/docker/pkg/pubsub"
+	"github.com/fdurand/moby/api/types"
+	"github.com/fdurand/moby/container"
+	"github.com/fdurand/moby/errdefs"
+	"github.com/fdurand/moby/pkg/pubsub"
 	"github.com/sirupsen/logrus"
 )
 

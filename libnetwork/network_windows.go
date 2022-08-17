@@ -8,9 +8,9 @@ import (
 	"time"
 
 	"github.com/Microsoft/hcsshim"
-	"github.com/docker/docker/libnetwork/drivers/windows"
-	"github.com/docker/docker/libnetwork/ipamapi"
-	"github.com/docker/docker/libnetwork/ipams/windowsipam"
+	"github.com/fdurand/moby/libnetwork/drivers/windows"
+	"github.com/fdurand/moby/libnetwork/ipamapi"
+	"github.com/fdurand/moby/libnetwork/ipams/windowsipam"
 	"github.com/sirupsen/logrus"
 )
 

@@ -1,7 +1,7 @@
 //go:build linux
 // +build linux
 
-package local // import "github.com/docker/docker/volume/local"
+package local // import "github.com/fdurand/moby/volume/local"
 
 import (
 	"os"
@@ -9,9 +9,9 @@ import (
 	"strconv"
 	"testing"
 
-	"github.com/docker/docker/errdefs"
-	"github.com/docker/docker/pkg/idtools"
-	"github.com/docker/docker/quota"
+	"github.com/fdurand/moby/errdefs"
+	"github.com/fdurand/moby/pkg/idtools"
+	"github.com/fdurand/moby/quota"
 	"gotest.tools/v3/assert"
 	is "gotest.tools/v3/assert/cmp"
 )

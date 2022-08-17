@@ -10,7 +10,7 @@ import (
 
 	"github.com/containerd/containerd/mount"
 	"github.com/containerd/containerd/platforms"
-	"github.com/docker/docker/pkg/idtools"
+	"github.com/fdurand/moby/pkg/idtools"
 	"github.com/moby/buildkit/snapshot"
 	"github.com/moby/buildkit/solver/pb"
 	"github.com/moby/buildkit/util/archutil"

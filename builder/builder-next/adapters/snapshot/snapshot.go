@@ -11,9 +11,9 @@ import (
 	"github.com/containerd/containerd/leases"
 	"github.com/containerd/containerd/mount"
 	"github.com/containerd/containerd/snapshots"
-	"github.com/docker/docker/daemon/graphdriver"
-	"github.com/docker/docker/layer"
-	"github.com/docker/docker/pkg/idtools"
+	"github.com/fdurand/moby/daemon/graphdriver"
+	"github.com/fdurand/moby/layer"
+	"github.com/fdurand/moby/pkg/idtools"
 	"github.com/moby/buildkit/identity"
 	"github.com/moby/buildkit/snapshot"
 	"github.com/opencontainers/go-digest"
@@ -101,7 +101,7 @@ func (s *snapshotter) Name() string {
 
 func (s *snapshotter) IdentityMapping() *idtools.IdentityMapping {
 	// Returning a non-nil but empty *IdentityMapping breaks BuildKit:
-	// https://github.com/moby/moby/pull/39444
+	// https://github.com/fdurand/moby/pull/39444
 	if s.opt.IdentityMapping.Empty() {
 		return nil
 	}
@@ -533,7 +533,7 @@ func (m *mountable) releaseMount() error {
 
 func (m *mountable) IdentityMapping() *idtools.IdentityMapping {
 	// Returning a non-nil but empty *IdentityMapping breaks BuildKit:
-	// https://github.com/moby/moby/pull/39444
+	// https://github.com/fdurand/moby/pull/39444
 	if m.idmap.Empty() {
 		return nil
 	}

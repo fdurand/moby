@@ -1,10 +1,10 @@
-package client // import "github.com/docker/docker/client"
+package client // import "github.com/fdurand/moby/client"
 
 import (
 	"context"
 	"net/url"
 
-	"github.com/docker/docker/api/types/swarm"
+	"github.com/fdurand/moby/api/types/swarm"
 )
 
 // ConfigUpdate attempts to update a config

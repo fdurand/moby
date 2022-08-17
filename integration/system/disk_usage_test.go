@@ -1,13 +1,13 @@
-package system // import "github.com/docker/docker/integration/system"
+package system // import "github.com/fdurand/moby/integration/system"
 
 import (
 	"context"
 	"testing"
 
-	"github.com/docker/docker/api/types"
-	"github.com/docker/docker/api/types/volume"
-	"github.com/docker/docker/integration/internal/container"
-	"github.com/docker/docker/testutil/daemon"
+	"github.com/fdurand/moby/api/types"
+	"github.com/fdurand/moby/api/types/volume"
+	"github.com/fdurand/moby/integration/internal/container"
+	"github.com/fdurand/moby/testutil/daemon"
 	"gotest.tools/v3/assert"
 	"gotest.tools/v3/skip"
 )
@@ -263,7 +263,7 @@ func TestDiskUsage(t *testing.T) {
 			} {
 				tc := tc
 				t.Run(tc.doc, func(t *testing.T) {
-					// TODO: Run in parallel once https://github.com/moby/moby/pull/42560 is merged.
+					// TODO: Run in parallel once https://github.com/fdurand/moby/pull/42560 is merged.
 
 					du, err := client.DiskUsage(ctx, tc.options)
 					assert.NilError(t, err)

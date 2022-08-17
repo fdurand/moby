@@ -325,7 +325,7 @@ func (a *Agent) run(ctx context.Context) {
 				// when the worker finishes the subscription, we should notify
 				// ourselves that this has occurred. We cannot rely on getting
 				// a Close message from the manager, as any number of things
-				// could go wrong (see github.com/moby/moby/issues/39916).
+				// could go wrong (see github.com/fdurand/moby/issues/39916).
 				subscriptionDone <- sub.ID
 			}()
 		case subID := <-subscriptionDone:

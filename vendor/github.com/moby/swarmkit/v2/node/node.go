@@ -18,8 +18,8 @@ import (
 	"github.com/moby/swarmkit/v2/ca/keyutils"
 	"github.com/moby/swarmkit/v2/identity"
 
-	"github.com/docker/docker/libnetwork/drivers/overlay/overlayutils"
-	"github.com/docker/docker/pkg/plugingetter"
+	"github.com/fdurand/moby/libnetwork/drivers/overlay/overlayutils"
+	"github.com/fdurand/moby/pkg/plugingetter"
 	"github.com/docker/go-metrics"
 	grpc_prometheus "github.com/grpc-ecosystem/go-grpc-prometheus"
 	"github.com/moby/swarmkit/v2/agent"

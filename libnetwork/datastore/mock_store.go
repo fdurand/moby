@@ -3,7 +3,7 @@ package datastore
 import (
 	"errors"
 
-	"github.com/docker/docker/libnetwork/types"
+	"github.com/fdurand/moby/libnetwork/types"
 	"github.com/docker/libkv/store"
 )
 

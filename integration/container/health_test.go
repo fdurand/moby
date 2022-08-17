@@ -1,14 +1,14 @@
-package container // import "github.com/docker/docker/integration/container"
+package container // import "github.com/fdurand/moby/integration/container"
 
 import (
 	"context"
 	"testing"
 	"time"
 
-	"github.com/docker/docker/api/types"
-	containertypes "github.com/docker/docker/api/types/container"
-	"github.com/docker/docker/client"
-	"github.com/docker/docker/integration/internal/container"
+	"github.com/fdurand/moby/api/types"
+	containertypes "github.com/fdurand/moby/api/types/container"
+	"github.com/fdurand/moby/client"
+	"github.com/fdurand/moby/integration/internal/container"
 	"gotest.tools/v3/assert"
 	"gotest.tools/v3/poll"
 	"gotest.tools/v3/skip"
@@ -36,7 +36,7 @@ func TestHealthCheckWorkdir(t *testing.T) {
 // GitHub #37263
 // Do not stop healthchecks just because we sent a signal to the container
 func TestHealthKillContainer(t *testing.T) {
-	skip.If(t, testEnv.OSType == "windows", "Windows only supports SIGKILL and SIGTERM? See https://github.com/moby/moby/issues/39574")
+	skip.If(t, testEnv.OSType == "windows", "Windows only supports SIGKILL and SIGTERM? See https://github.com/fdurand/moby/issues/39574")
 	defer setupTest(t)()
 
 	ctx := context.Background()

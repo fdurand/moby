@@ -1,13 +1,13 @@
-package container // import "github.com/docker/docker/integration/container"
+package container // import "github.com/fdurand/moby/integration/container"
 
 import (
 	"context"
 	"strings"
 	"testing"
 
-	"github.com/docker/docker/api/types"
-	"github.com/docker/docker/api/types/versions"
-	"github.com/docker/docker/integration/internal/container"
+	"github.com/fdurand/moby/api/types"
+	"github.com/fdurand/moby/api/types/versions"
+	"github.com/fdurand/moby/integration/internal/container"
 	"gotest.tools/v3/assert"
 	"gotest.tools/v3/skip"
 )

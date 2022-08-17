@@ -4,9 +4,9 @@ import (
 	"bytes"
 	"context"
 
-	"github.com/docker/docker/api/types"
-	"github.com/docker/docker/client"
-	"github.com/docker/docker/pkg/stdcopy"
+	"github.com/fdurand/moby/api/types"
+	"github.com/fdurand/moby/client"
+	"github.com/fdurand/moby/pkg/stdcopy"
 )
 
 // ExecResult represents a result returned from Exec()

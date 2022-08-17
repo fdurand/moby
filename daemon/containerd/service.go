@@ -4,11 +4,11 @@ import (
 	"context"
 
 	"github.com/containerd/containerd"
-	"github.com/docker/docker/api/types"
-	"github.com/docker/docker/container"
-	"github.com/docker/docker/daemon/images"
-	"github.com/docker/docker/image"
-	"github.com/docker/docker/layer"
+	"github.com/fdurand/moby/api/types"
+	"github.com/fdurand/moby/container"
+	"github.com/fdurand/moby/daemon/images"
+	"github.com/fdurand/moby/image"
+	"github.com/fdurand/moby/layer"
 )
 
 // ImageService implements daemon.ImageService
